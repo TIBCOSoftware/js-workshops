@@ -1,0 +1,20 @@
+body {
+	overflow: hidden;
+}
+
+#editor {
+	margin: 0;
+	position: absolute;
+	top: 0;
+	bottom: 40px;
+	left: 0;
+	right: 0;
+}
+
+#divButton{
+	position: absolute;
+	top: auto;
+	bottom: 5px;
+	width:100%;
+	text-align:center;
+}

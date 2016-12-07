@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>Jaspersoft - Visualize.js Workshop</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/underscore-min.js"></script>
+	
+	<!-- Code SyntaxHighlighter -->
+	<script type="text/javascript" src="assets/js/shCore.js"></script>
+	<script type="text/javascript" src="assets/js/shBrushJScript.js"></script>
+	<script type="text/javascript" src="assets/js/shBrushXml.js"></script>
+	<link type="text/css" rel="stylesheet" href="assets/css/shCoreDefault.css"/>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+	
+	<!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+	
+	
+	<!-- Visualize.js -->	
+	<!-- LAB_1_1 --> 
+	<script src="http://localhost:8081/jasperserver-pro/client/visualize.js"></script>
+	<script src='assets/js/persist-min.js' type='text/javascript' ></script>
+	<script src="assets/js/textEditor.js"></script>	
+	<script src="assets/js/visualizejs_main.js"></script>	
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
+		
+	<!-- Menu -->
+	<nav class="menu" id="theMenu">
+		<div class="menu-wrap">
+			<h1 class="logo"><a href="index.html#home">Jaspersoft</a></h1>
+			<i class="icon-remove menu-close"></i>
+			<a href="#home" class="smoothScroll">Top</a>
+			<a href="#lab1" class="smoothScroll">Lab 1</a>
+			<a href="#lab2" class="smoothScroll">Lab 2</a>
+			<a href="#lab3" class="smoothScroll">Lab 3</a>
+			<a href="#lab4" class="smoothScroll">Lab 4</a>
+			<a href="#labBonus" class="smoothScroll">Bonus Labs</a>
+			<a href="#externalReferences" class="smoothScroll">External References</a>
+			<a href="#about" class="smoothScroll">About</a>
+			<a href="#contact" class="smoothScroll">Contact</a>
+			<a href="#"><i class="icon-facebook"></i></a>
+			<a href="#"><i class="icon-twitter"></i></a>
+			<a href="#"><i class="icon-dribbble"></i></a>
+			<a href="#"><i class="icon-envelope"></i></a>
+		</div>
+		
+		<!-- Menu button -->
+		<div id="menuToggle"><i class="icon-reorder"></i></div>
+	</nav>
+
+
+	
+	<!-- ========== HEADER SECTION ========== -->
+	<section id="home" name="home"></section>
+	<div id="headerwrap" class="visualizeBckg">
+		<div class="container">
+			<br>
+			<h1>Jaspersoft</h1>
+			<h2>Embedding using Visualize.js - Workshop</h2>
+			<div class="row">
+				<br>
+				<br>
+				<br>
+				<div class="col-lg-6 col-lg-offset-3">
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div><!-- /headerwrap -->
+	
+	
+	<!-- ========== WHITE SECTION ========== -->
+	<div id="w">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+				<h3>WELCOME TO THE <bold>VISUALIZE.JS WORKSHOP</bold>. <br/>
+				A FREE GUIDED WORKSHOP.<br/>CRAFTED WITH LOVE BY <bold>JASPERSOFT SC TEAM</bold>. <br/>
+					<bold>IDEAL FOR</bold> JAVASCRIPT DEVELOPERS & BI EXPERTS.
+				</h3>
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div><!-- /w -->
+	
+	
+	<!-- ========== LAB 1 ========== -->
+	<section id="lab1" name="lab1"></section>
+	<div class="lab alt">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+				<h3><bold>LAB 1</bold> <br/></h3>
+				<br>
+				<h4>Task 1 - Add Visualize.js script in the page</h4>	
+				<p>Browse the source code of this page<br>
+				Search for the Comment LAB_1.1 in the page<br>
+				You will notice an import of Visualize.js script from JasperReports Server instance<br>
+				Please note the address may be different from the one below
+<pre class="brush: xml;">
+&lt;!-- LAB_1.1 --&gt; 
+&lt;script src=&quot;http://localhost:8090/jasperserver-pro/client/visualize.js&quot;&gt;&lt;/script&gt;
+</pre>
+				</p>
+				</br>
+				<h4>Task 2 - Configure the login using username and password</h4>	
+				<p>				
+				</p>Now that the script is included we'll add all our javascript code in a dedicated file.<br>
+				Open the <a href="javascript:openEditor();">Online Editor</a> (file should be empty).<br>
+				The first step is to configure the visualize.js library with details of our login.<br>
+				In a real world situation we would probably use a SSO mechanism or a token here, but for the sake of this sample we'll simply use a static username/password.	
+
+<pre class="brush: js;">
+visualize({
+    auth: {
+        name: &quot;jasperadmin&quot;,
+        password: &quot;jasperadmin&quot;,
+        organization: &quot;organization_1&quot;
+    }
+}, function (v) {
+	/*HERE WE'LL ADD OUR VISUALIZE.JS CALLS*/
+	alert('Visualize.js is ready')
+
+});	
+</pre>			
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div><!-- /w -->
+	
+	<!-- ========== LAB 2 ========== -->
+	<section id="lab2" name="lab2"></section>
+	<!-- ========== CHARTS - WHITE SECTION ========== -->
+	<div id="dg" class="lab">
+		<div class="container">
+			<div class="row">
+				<h3><bold>LAB 2<bold></h3>
+				<br>
+				<br>
+				<div class="col-lg-4">
+					<div id="div_chart_1" align="center" class="chartContainerViz" >
+
+						<object type="image/svg+xml" data="assets/img/drawsvg.svg" width="80%" height="100%">
+							<param name="Title" value="CHART 1" />
+							<param name="DivId" value="Div Id: div_chart_1" />
+						 </object>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div id="div_chart_2" align="center" class="chartContainerViz" > 
+					
+						<object type="image/svg+xml" data="assets/img/drawsvg.svg" width="80%" height="100%">
+							<param name="Title" value="CHART 2" />
+							<param name="DivId" value="Div Id: div_chart_2" />
+						 </object>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div id="div_chart_3" align="center" class="chartContainerViz" > 
+						<object type="image/svg+xml" data="assets/img/drawsvg.svg" width="80%" height="100%">
+							<param name="Title" value="CHART 3" />
+							<param name="DivId" value="Div Id: div_chart_3" />
+						 </object>
+					</div>
+				</div>
+			
+			</div>	
+		</div><!-- /container -->
+	</div><!-- /dg -->
+	
+	
+	
+	<div class="lab">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+				<h4>Task 1 - Find a Report to be embedded</h4>	
+				<p>	In the area above you can see 3 Images as placeholder.<br>
+				In each Image is written the Id of the container Div.<br>
+				In this task we'll replace the first Image with a report from JasperReports Server via Visualize.js.<br>
+				First, open your JasperReports Server (<a href="http://localhost:8090/jasperserver-pro/flow.html?_flowId=homeFlow&j_username=jasperadmin&j_password=jasperadmin" target="_blank">link</a>).<br>
+				On the top right search box type &quot;Demographic Report&quot; and hit Enter<br><br>
+				(hover on blue text to show images)<br>
+				<span class="showImage"><img src="assets/img/tutorial/02.png">One Report</span> should be in the results, open it to check it out.<br>
+				Now Go back to the result search, right click the Report, click Properties...<br>
+				The <span class="showImage"><img src="assets/img/tutorial/01.png">Report Path</span> is all we need in order to call this report from Visualize.js<br><br>
+				</p>
+				<h4>Task 2 - Add the first chart with visualize.js</h4>	
+				<p>
+				Now let's add the code to render the report in our webpage! <br>
+				Open the visualizejs_main.js and replace the alert with the code below:
+				
+<pre class="brush: js;">
+v(&quot;#div_chart_1&quot;).report({
+	resource: &quot;/public/Samples/Reports/02._Sales_Mix_by_Demographic_Report&quot;,
+	scrollToTop:false,
+	scale: &quot;height&quot;,
+	error: function (err) {
+		alert(err.message);
+	}
+});
+</pre>
+				Refresh this page to see the chart! Was very easy right?
+				</p>
+				</br>
+				<h4>Task 3 - Add a chart with interaction</h4>	
+				<p>Now we'll use the other 2 divs above to add 2 charts.<br>
+				This time only one chart will be rendered when the page loads, <br>the 3rd chart will be loaded on click of a pie's slice.<br>
+				First let's add the pie chart, adding an alert onclick of slice.<br>
+				Add the following code immediately after the chart code added in previous task:
+				
+<pre class="brush: js;">
+v(&quot;#div_chart_2&quot;).report({
+	resource: &quot;/public/Samples/Reports/States&quot;,
+	scrollToTop:false,
+	scale: &quot;height&quot;,
+	linkOptions: {
+		events: {
+			&quot;mouseOut&quot;:function (ev, link) {},
+			&quot;mouseOver&quot;:function (ev, link) {},
+			&quot;select&quot;:function (ev, link) {},
+			&quot;click&quot;: function (ev, link) {				
+				 if (link.type == &quot;ReportExecution&quot;) {
+					 alert('You clicked on State: '+ link.parameters.store_state);
+
+				}
+			}
+		}
+	},
+	error: function (err) {
+		alert(err.message);
+	}
+});
+</pre>			
+				</p>
+				<br>
+								<h4>Task 4 - Drilldown on Click</h4>	
+				<p>Last step of this lab is to replace the alert we added previously with a report call.<br>
+				It's easier than you expect :)<br>
+				Add the following code replacing the alert added in previous step:
+				
+<pre class="brush: js;">
+/*...
+if (link.type == &quot;ReportExecution&quot;) {*/
+	v(&quot;#div_chart_3&quot;).report({
+		resource: &quot;/public/Samples/Reports/Cities&quot;,
+		scrollToTop:false,
+		scale: &quot;height&quot;,
+		params: {
+			state: [link.parameters.store_state]
+		},
+	});
+	//console.log(link.parameters.store_state);
+/*
+}
+*/
+</pre>		
+				Refresh the page, anc click on the pie chart, you should see the new chart appearing.<br>
+				for each slice of pie a different parameter will be passed to the Cities Report<br>
+				that's why when you click on California, you'll see only city in state CA
+				</p>
+				
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div><!-- /w -->
+	
+		<!-- ========== LAB 3 ========== -->
+	<section id="lab3" name="lab3"></section>
+	<div class="lab alt">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+				<h3><bold>LAB 3</bold> <br><br></h3>
+				<p>In this lab we'll add a report, and then add a javascript function onclick of the images below<br>
+				in order to pass parameters to this report.</p>
+				<div id="icon_params">
+					<img id="foodImage" src="assets/img/chicken-icon.png" class="clickable"/>
+					<img id="drinkImage" src="assets/img/drink-icon.png" class="clickable"/>
+				</div>
+				<br>
+				<select id="productFamilySelector"></select>
+				<br>
+				Container Div Id: &nbsp;&nbsp;&nbsp;<i>productFamilySelector</i>
+				<br>
+				<br>
+				<div id="div_report_1" align="center" class="reportContainerViz" >
+					<object type="image/svg+xml" data="assets/img/drawsvg.svg" width="100%" height="100%">
+						<param name="Title" value="REPORT 1" />
+						<param name="DivId" value="Div Id: div_report_1" />
+					 </object>					
+				</div>
+				<br><br>
+				<h4>Task 1 - Add the Report</h4>	
+				<p>
+				Now you should be familiar with the syntax to add a report. There is only a slight difference here. <br>
+				Since we'll need to reference to this report from other functions (to pass the parameter value) <br>
+				we'll put the container div inside the report function. Using this syntax visualize will return us <br>
+				an object representing the report that we can then use for modifications.<br>
+				
+<pre class="brush: js;">
+var drinkFoodReport = v.report({
+	resource: &quot;/public/Samples/Reports/06g.ProfitDetailReport&quot;,
+	scrollToTop:false,
+	scale: &quot;height&quot;,
+	container:&quot;#div_report_1&quot;,
+	error: function (err) {
+		alert(err.message);
+	}
+});
+</pre>
+				</p>
+				<br>
+				<h4>Task 2 - Add the Action on image click (Food)</h4>	
+				<p>
+				The images have specific ID : <b>foodImage</b>, <b>drinkImage</b>.<br>
+				Let's add the action on the food image:
+				
+<pre class="brush: js;">
+$(&quot;#foodImage&quot;).on(&quot;click&quot;, function() {
+	var params = {
+		ProductFamily: [&quot;Food&quot;]
+	};
+	
+	drinkFoodReport.params(params).run()
+		.fail(function(err) {
+			alert(err.message);
+		});
+	
+});
+</pre>
+				</p>
+				<br>
+				<h4>Task 3 - Add the Action for Drinks</h4>	
+				<p>
+				It should be easy for you to add the same interactivity also for the Drink Image.<br>
+				Remember, the Image Id is <b>drinkImage</b>
+				</p>
+				<br>
+				<h4>Task 4 - Create Input Control for Report</h4>	
+				<p>
+				Each Report usually comes with multiple InputControls: for each parameter Jaspersoft should be aware of what kind of selection should be offered to end user.<br>
+				In this task we'll get the details of Input control for this report and We'll display them as a combo box.
+				
+<pre class="brush: js;">
+var inputControls = v.inputControls({
+	resource: &quot;/public/Samples/Reports/06g.ProfitDetailReport&quot;,
+	success: function(data){
+		var productFamilyInputControl = _.findWhere(data, {
+			id: &quot;ProductFamily&quot;});
+			
+		_.each(productFamilyInputControl.state.options, function (option) {
+			$(&quot;#productFamilySelector&quot;).append(&quot;&lt;option &quot; + 	
+				(option.selected ? &quot;selected&quot; : &quot;&quot;) + 
+				&quot; value='&quot; + option.value + &quot;'&gt;&quot; + 
+				option.label + 
+				&quot;&lt;/option&gt;&quot;);
+		});
+	}
+});
+
+$(&quot;#productFamilySelector&quot;).on(&quot;change&quot;, function () {
+	drinkFoodReport.params({
+		&quot;ProductFamily&quot;: [$(this).val()]
+	}).run();
+});
+</pre>
+				</p>
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div><!-- /LAB 3 -->
+	
+	<!-- ========== LAB 4 ========== -->
+	<section id="lab4" name="lab4"></section>
+	<div class="lab">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+				<h3><bold>LAB 4</bold> <br><br></h3>
+				<p>In this lab we'll add a Dashboard, and then create combobox to let user select from available Dashboards.<br>
+				The dashboards list is extracted directly from JasperReports Server</p>
+				
+				<br>
+				<select id="dashboardSelector"></select>
+				<br>
+				Container Div Id: &nbsp;&nbsp;&nbsp;<i>dashboardSelector</i>
+				<br>
+				<br>
+				<div id="div_dashboard_1" align="center" class="dashboardContainerViz" >
+					<object type="image/svg+xml" data="assets/img/drawsvg.svg" width="100%" height="100%">
+						<param name="Title" value="DASHBOARD 1" />
+						<param name="DivId" value="Div Id: div_dashboard_1" />
+					 </object>	
+				</div>
+				<br><br>
+				<h4>Task 1 - Add the Dashboard</h4>	
+				<p>
+				Let's see how to embed a dashboard. It's really not much different from a Report...<br>
+				Check out the code below:
+				
+<pre class="brush: js;">
+v(&quot;#div_dashboard_1&quot;).dashboard({
+	resource: &quot;/public/Samples/Dashboards/4._New_Dashboard&quot;,
+	error: function (err) {
+		alert(err.message);
+	}
+});
+</pre>
+				</p>
+				<br>
+				<h4>Task 2 - Get available Dashboards from JRS</h4>	
+				<p>
+				The code below request to JRS the list of resources of type Dashboard in a specific folder.<br>
+				Please note that onSuccess we call a function that is not yet defined, you'll find it in the next Task.<br>
+				So before reloading the page <b>complete also next task</b>
+				
+<pre class="brush: js;">
+v.resourcesSearch({
+	folderUri:&quot;/public/Samples/Dashboards&quot;,
+	recursive:false,
+	types:[&quot;dashboard&quot;],
+	success: listRepository,
+	error: function (err) {
+		alert(err.message);
+	}
+});
+</pre>
+				</p>
+				<br>
+			
+				<h4>Task 3 - Fill the ComboBox and add Load Dashboard on change</h4>	
+				<p>
+				In this Last Task we create a function to analyze the json result retrieved from previous task.<br>
+				With the result we'll populate the combobox already in this page.
+<pre class="brush: js;">
+// Repo Lister
+function listRepository(results) {
+	var dSelector = $(&quot;#dashboardSelector&quot;);
+	dSelector.empty(); // remove old options
+	$.each(results, function() {
+		dSelector.append($(&quot;&lt;option&gt;&lt;/option&gt;&quot;)
+		 .attr(&quot;value&quot;, this.uri).text(this.label));
+	});
+
+	//console.log($(&quot;#select&quot;));
+	dSelector.change(function() {
+		v.dashboard({
+				resource: this.value,
+				container: &quot;#div_dashboard_1&quot;,
+				error: function (err) {
+					alert(err.message);
+				}
+		});
+	});
+	// To select the option to display as default via index
+	$(&quot;#dashboardSelector option:eq(5)&quot;).prop(&quot;selected&quot;, true).change(); 
+}
+</pre>
+				</p>
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div><!-- /LAB 4 -->
+	
+	
+		<!-- ========== BOSUN LABS ========== -->
+	<section id="labBonus" name="labBonus"></section>
+	<div class="lab alt">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+				<h3><bold>BONUS LABS</bold> <br><br></h3>
+				<p>In this section you find some additional Tasks that you can use as exercise.<br>
+				The level of difficulty is higher so no solution is provided<br>
+				Use the Documentation and resources in the section EXTERNAL REFERENCE to support your exercise</p>
+				<br>
+				
+				<h4>Fix Scroll To Top Issue</h4>	
+				<p>
+				As soon as you add a dashboard you can see that the screen will jump to top after the dashboard renders. <br>
+				This is due to the property scrollToTop not being exposed by the dashboard API. <br>
+				You can fix this easily changing a javascript file in JasperReport Server.<br>
+				Browse your tomcat folder and open this file:<br>
+				<i>/apache-tomcat/webapps/jasperserver-pro/scripts/bower_components/bi-report/src/bi/report/view/ReportView.js</i><br>
+				Change the line 192 as in the code below:
+				
+<pre class="brush: js;">
+scrollToTop = typeof this.stateModel.get(&quot;scrollToTop&quot;) === &quot;undefined&quot; ? false : this.stateModel.get(&quot;scrollToTop&quot;),
+</pre>
+				</p>
+				<br>
+				<h4>Task 1 - Report Toolbar </h4>	
+				<p>
+					Add Buttons to handle pagination of Report and other options available via visualize.js as you prefer.
+				</p>
+				<br>
+				<h4>Task 2 - Add Button to Export Report</h4>	
+				<p>
+				Add A comboBox with available values of export Type from JRS and an Export Button<br>
+				When a user select the export type and click Export the report should be downloaded in the requested format
+				</p>
+				<br>
+				<h4>Task 3 - Handle Anchors and page search</h4>	
+				<p>
+				Provide the ability to move quickly through reports with direct page anchors.<br>
+				Also a text box to enter a keyword an perform a search in the report.
+				</p>
+				<br>
+				<h4>Task 4 - Dashboard Hyperlink</h4>	
+				<p>
+				Add an event on a dashboard hyperlink, maybe to open another report passing a parameter.
+				</p>
+			
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div><!-- /LAB 4 -->
+	
+	<!-- ========== WHITE SECTION ========== -->
+	<div id="w2">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+				<h3>Troubles with the exercise? Click <a id="linkLoadSolution" href="javascript:void(0)" >Here</a> to load the Solution javascript code into the Online Designer
+				</h3>
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div><!-- /w -->
+	
+	
+	
+	<section id="externalReferences" name="externalReferences"></section>
+	<div id="portfoliowrap">
+		<div class="container">
+			<div class="row">
+				<h3>EXTERNAL REFERENCES</h3>
+				<br>
+				<br>
+				<div class="col-lg-4 port-space">
+					<a href="assets/files/JasperReports-Server-Visualize.js-Guide.pdf" target="_blank"><img src="assets/img/work1.png"></a>
+				</div>
+				<div class="col-lg-4 port-space">
+					<a href="http://www.jaspersoft.com/embedded-bi-in-action" target="_blank"><img src="assets/img/work2.png"></a>
+				</div>
+				<div class="col-lg-4 port-space">
+					<a href="http://community.jaspersoft.com/sites/default/files/wiki_attachments/main_1.html" target="_blank"><img src="assets/img/work3.png"></a>
+				</div>				
+			</div>	
+		</div><!-- /container -->
+	</div><!-- /portfoliowrap -->
+	
+	<!-- ========== WHITE SECTION ========== -->
+	<div id="w">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+				<h3>EASY <bold>EMBEDDED ANALYTICS</bold> THAT DEVELOPERS <bold>LOVE</bold> </br>AND END USERS <bold>CRAVE</bold>.
+				</h3>
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div><!-- /w -->
+	
+	<!-- ========== ABOUT - GREY SECTION ========== -->
+	<section id="about" name="about"></section>
+	<div id="g">
+		<div class="container">
+			<div class="row">
+				<h3>ABOUT US</h3>
+				<br>
+				<br>
+				<div class="col-lg-2"></div>
+				<div class="col-lg-8">
+				<p>Jaspersoft's open source business intelligence software has more than 14 million product downloads worldwide, 175,000 production deployments and over 14,000 commercial customers in 100 countries. Its BI suite is advanced regularly by a development community of more than 225,000 registered members. </br>The <b>Solutions Consultants Team</b> is dedicated to support prospects in their evaluation of Jaspersoft.</p>
+				<br>
+				<br>
+				</div>
+				<div class="col-lg-2"></div>
+				<div class="col-lg-3 team">
+					<img class="img-circle" src="assets/img/team01.jpg" height="90" width="90">
+					<h4>Gianluca Natali</h4>
+					<h5><i>Senior Solution Consultant (EMEA)</i></h5>
+					<p>Co-Author of Jaspersoft WebService Datasource and Jaspersoft ETL Plugin</p>
+					<p>
+						<a href="https://www.linkedin.com/in/gianlucanatali"  target="_blank"><i class="icon-linkedin"></i></a>
+						<a href="mailto:gnatali@tibco.com?Subject=Info%20regarding%20visualizejs%20workshop"  target="_blank"><i class="icon-envelope"></i></a>
+
+					</p>
+				</div>
+
+				<div class="col-lg-3 team">
+					<img class="img-circle" src="assets/img/team02.jpg" height="90" width="90">
+					<h4>Pierre Lambert</h4>
+					<h5><i>Senior Solution Consultant (France)</i></h5>
+					<p>Co-Author of Jaspersoft ETL Plugin and Data Integration specialist</p>
+					<p>
+						<a href="https://www.linkedin.com/in/pierre-lambert-493a0328"  target="_blank"><i class="icon-linkedin"></i></a>
+						<a href="mailto:plambert@tibco.com?Subject=Info%20regarding%20visualizejs%20workshop#"  target="_blank"><i class="icon-envelope"></i></a>
+
+					</p>
+				</div>
+
+				<div class="col-lg-3 team">
+					<img class="img-circle" src="assets/img/team03.jpg" height="90" width="90">
+					<h4>Elesh Mistry</h4>
+					<h5><i>Senior Solution Consultant (UK)</i></h5>
+					<p>Jaspersoft Evangelist, main panelist in Jaspersoft Weekly Live Demos</p>
+					<p>
+						<a href="https://www.linkedin.com/in/elesh-mistry-94b2965"  target="_blank"><i class="icon-linkedin"></i></a>
+						<a href="mailto:emistry@tibco.com?Subject=Info%20regarding%20visualizejs%20workshop"  target="_blank"><i class="icon-envelope"></i></a>
+
+					</p>
+				</div>
+
+				<div class="col-lg-3 team">
+					<img class="img-circle" src="assets/img/team04.jpg" height="90" width="90">
+					<h4>Guillaume Autier</h4>
+					<h5><i>Senior Manager Solution Consultant Jaspersoft (EMEA)</i></h5>
+					<p>Jaspersoft Guru, 8+ years of experience with the solution.</p>
+					<p>
+						<a href="https://www.linkedin.com/in/guillaumeautier"  target="_blank"><i class="icon-linkedin"></i></a>
+						<a href="mailto:gautier@tibco.com?Subject=Info%20regarding%20visualizejs%20workshop"  target="_blank"><i class="icon-envelope"></i></a>
+
+					</p>
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div><!-- /g -->
+	
+	<!-- ========== FOOTER SECTION ========== -->
+	<section id="contact" name="contact"></section>
+	<div id="f">
+		<div class="container">
+			<div class="row">
+					<h3><b>CONTACT US</b></h3>
+					<br>
+					<div class="col-lg-4">	
+						<h3><b>Call Us:</b></h3>
+						<h3>+44 800-5200443</h3>
+						<br>
+					</div>
+					
+					<div class="col-lg-4">
+						<h3><b>We Are Social</b></h3>
+						<p>
+							<a href="https://www.facebook.com/TIBCOJaspersoft" target="_blank"><i class="icon-facebook"></i></a>
+							<a href="https://twitter.com/jaspersoft" target="_blank"><i class="icon-twitter"></i></a>
+							<a href="http://www.jaspersoft.com/contact-us" target="_blank"><i class="icon-envelope"></i></a>
+						</p>
+						<br>
+					</div>
+					
+					<div class="col-lg-4">
+						<h3><b>Visit our Website:</b></h3>
+						<a href="http://www.jaspersoft.com" target="_blank"><h3>www.jaspersoft.com</h3></a>
+						<br>
+					</div>
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div><!-- /f -->
+	
+	<div id="c">
+		<div class="container">
+			<p>Created by <a href="https://www.linkedin.com/in/gianlucanatali" target="_blank">Gianluca Natali</a></p>
+		
+		</div>
+	</div>
+	
+	
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/smoothscroll.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+</html>
