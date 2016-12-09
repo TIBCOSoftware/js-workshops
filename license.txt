@@ -113,7 +113,6 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 SyntaxHighlighter
 http://alexgorbatchev.com/SyntaxHighlighter
-
 @version
 3.0.83 (July 02 2010)
 Copyright (C) 2004-2010 Alex Gorbatchev.
