@@ -1,0 +1,13 @@
+"ID","Name","Type","LowFat"
+"1","Whole Milk","Milk",False
+"2","1% Milk","Milk",True
+"3","2% Milk","Milk",True
+"4","Skim Milk","Milk",True
+"5","Half and Half","Cream",False
+"6","Heavy Cream","Cream",False
+"7","Light Cream","Cream",False
+"8","Whipping Cream","Cream",False
+"9","Almond Milk","Alternative",True
+"10","Soy Milk","Alternative",True
+"11","Coconut Milk","Alternative",True
+"12","Rice Milk","Alternative",True
