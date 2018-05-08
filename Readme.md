@@ -10,15 +10,14 @@ Getting Started
  
  - Download this github repo onto your local web server. Use any tool that you like (for example: [MAMP]) to host.
  
- - Build a new database in POSTGRES called "freshcoffee" with the following tables...
-  (coffee, dairy, drink, ingredient, sales)
+ - Build a new database in POSTGRES called "freshcoffee" with the tables... (coffee, dairy, drink, ingredient, sales)
   
  - You can then load the CSV data from the resources/data folder using the following in your termimal for each file.
- psql -c "COPY tbname FROM '/tmp/the_file.csv' delimiter '|' csv;"
+ - psql -c "COPY tbname FROM '/tmp/the_file.csv' delimiter '|' csv;"
  
  - Import the urban-roast-export.zip file from the resources/jrs-resources folder on this repo into the JasperReport Server by logging in as superuser and going to (admin > server settings > import).
  
- - Run any HTML file from the attached modules.
+ - Run the HTML files from the attached modules.
  
  - Note: You'll want to make sure that all HTML files point to the location you have JRS installed for Visualize.js. 
 	This is usually on localhost:8080 - "http://localhost:8080/jasperserver-pro/client/visualize.js"
