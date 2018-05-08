@@ -1,0 +1,1748 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.logo {
+    margin-top: 15px;
+    max-width: 340px;
+}
+
+/* Use these overrides to control the visibility of the ad hoc view scroll
+.ps-scrollbar-y-rail {
+  display:block !important;
+  background-color:#EEE !important;
+  opacity:1.0 !important;
+}
+
+.ps-scrollbar-y {
+  display:block !important;
+  background-color:#999 !important;
+  opacity:1.0 !important;
+}
+*/
+
+/*Disabled visualization selector*/
+#container1 .jr-mAdhoc-visualization-launcher.jr {
+  display: none;
+}
+
+/*Datatable headers*/
+#container1 .jr-mDatatable-header.jr .jr-mDatatable-row.jr .jr-mDatatable-cell.jr {
+  color: #405862;
+  font-size: 1.6em;
+}
+
+/*Datatable text*/
+#container1 .jr-mDatatable-cell.jr {
+  background-color: transparent;
+  color: #524336;
+  font-size: 1.21em;
+}
+
+#container1 .my-selected {
+  background-color: #FFF3CC!important;
+}
+
+/*Datatable row group*/
+#container1 .jr-mDatatable-row.jr-mDatatable-rowGroup.jr .jr-mDatatable-cell.jr {
+  background-color: #DBD6CB;
+  color: #03809e;
+  font-size: 1.7em;
+}
+
+#container1 .jr-mDatatable-cell-text.jr {
+  vertical-align: top;
+  background: #F0E9DE;
+}
+
+/*Datatable header*/
+#container1 .jr-mDatatable-headerContainer.jr {
+  background-color: #e8e6de;
+}
+
+/*Datatable background*/
+#container1 .jr-mDatatable.jr {
+  background-color: #e8e6de;
+}
+
+/*Datatable header style*/
+#container1 .jr-mDatatableContainer.jr {
+  outline: none;
+}
+
+/*Datatable header style*/
+#container1 .jr-mDatatableContainer.jr .jr-mDatatable-cell.jr-jHyperLink {
+  border: none;
+}
+
+/*Datatable header style*/
+#container1 .jr-mDatatable-cellRowlabel.jr-mDatatable-cellField.jr,
+#container1 .jr-mDatatable-cellColumnlabel.jr-mDatatable-cellField.jr,
+#container1 .jr-mDatatable-header.jr .jr-mDatatable-row.jr {
+  background-color: transparent;
+  font-style: bold;
+}
+
+/*Datatable odd row background color*/
+#container1 .jr-mDatatable-rowOdd.jr {
+  background-color: #DBD6CC;
+}
+
+/*Datatable even row background color*/
+#container1 .jr-mDatatable-rowEven.jr {
+  background-color: transparent;
+  padding-top: 0.100em;
+  padding-bottom: 0.100em;
+}
+
+#container1 .jr-mDatatable-cell-currency.jr, .jr-mDatatable-cell-date.jr, .jr-mDatatable-cell-number.jr, .jr-mDatatable-cell-text.jr {
+  padding-top: 0.200em;
+  padding-bottom: 0.200em;
+}
+
+/*Datatable text style*/
+#container1 .jr-mDatatable-cell-text.jr {
+  line-height: 30px;
+  font-style: bold;
+  background-color: transparent;
+}
+
+div jr-mAdhoc-visualization jr jr-jAdhocVizualization {
+  overflow-y: scroll;
+}
+
+#coffeeTag ul,ol {
+    font-size:1.6em;
+}
+
+#container4 {
+  width: 100%;
+  height: 500px;
+}
+
+#main { background-color: #e8e6de; }
+
+/* Chart Selector dialog list */
+div .jr-mDialog-body.jr .jr-mVisualchooser.jr .jr-mVisualchooser-panel.jr {
+  background-color: #405862;
+}
+
+/* Chart Selector header background */
+div .jr-mDialog-header.jr {
+  background-color: #EDEDED;
+  height: 3.509em;
+}
+
+/* Chart Selector header title */
+div .jr-mDialog-header-title.jr {
+  color: #405862;
+  font-size: 1.3em;
+  font-weight: 800;
+}
+
+/* Chart Selector header title */
+div .jr-mButton-icon.jr-mIcon.jr-cancel.jr {
+  color: #405862;
+  font-size: 1.882em;
+  font-weight: 700;
+}
+
+/* Chart Selector dialog text color */
+div .jr-mDialog-body.jr .jr-mVisualchooser.jr .jr-mVisualchooser-panel.jr .jr-mTab-item.jr .jr-mTab-item-label.jr {
+  color: #F9F9F9;
+}
+
+/* Chart Visual Chooser label selected */
+div .jr-mVisualchooser-menu-item.jr-isSelected.jr .jr-mVisualchooser-menu-item-label.jr {
+  color: #039dc1;
+}
+
+/* Chart Selector dialog hovered item */
+div .jr-mTabReverse.jr .jr-mTab-item.jr-isHovered.jr {
+  background-color: #2C110A;
+  color: #FFF;
+}
+
+div .jr-mTabReverse.jr .jr-mTab-item.jr-isHovered.jr .jr-mTab-item-label.jr {
+  color: #FFF !important;
+}
+
+div .jr-mVisualchooser-body.jr .jr-mVisualchooser-menu.jr {
+  background-color: #F6F6F6;
+}
+
+/* Chart Visual Chooser */
+div .jr-mTabReverse.jr .jr-mTab-item.jr-isActive.jr {
+  background-color: #F6F6F6;
+}
+
+/* Chart Visual Chooser */
+div .jr-mTabReverse.jr .jr-mTab-item.jr-isActive.jr .jr-mTab-item-label.jr {
+  color: #03809e !important;
+}
+
+div .jr-mOverlay.jr {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.multiselect-group {
+  margin-bottom: 2px;
+  margin-left: 10px;
+}
+
+.multiselect {
+  display: inline-block;
+  margin: 0px;
+  margin-right: 6px;
+}
+
+.multiselect .btn-default {
+  background-color: #7c6059;
+  color: #fff;
+  border-color: #555;
+  border-width: thin;
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+  background-color: #4AAD91;
+}
+
+p.multiLabel {
+  color: #5C2F22;
+  font-size: 1.440em;
+  font-weight: 600;
+  margin: 8px;
+  margin-bottom: 4px;
+  margin-left: 3px;
+}
+
+.rightPanel {
+  margin-left: 15px;
+}
+
+.leftPanel {
+  margin-left: 10px;
+}
+
+/* Highchart country map custom CSS */
+#countryMap {
+  height: 400px;
+  min-width: 310px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.loading {
+  margin-top: 10em;
+  text-align: center;
+  color: gray;
+}
+
+.report-viewer {
+  background: #d6d1c7;
+  margin-top: 10px;
+  padding: 3px;
+  padding-top: 0px;
+
+}
+
+.cafe-report-viewer {
+  background: #D4C0A0;
+  margin-top: 10px;
+  padding: 3px;
+  padding-top: 0px;
+
+}
+
+.report-viewer-header {
+  background: #d6d1c7;
+  padding: 4px;
+  padding-top: 6px;
+  padding-bottom: 5px;
+  margin-bottom: 1px;
+  margin-top: 4px;
+}
+
+.cafe-report-viewer-header {
+  background: #F0E9DE;
+  padding: 4px;
+  padding-top: 6px;
+  padding-bottom: 5px;
+  margin-bottom: 1px;
+  margin-top: 4px;
+}
+
+.previous-button {
+  height: 23px;
+}
+
+.next-button {
+  height: 23px;
+}
+
+.page-range {
+  display: inline;
+  margin-left: 10px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.page-input {
+  position: relative;
+  top: 1px;
+  width: 90px;
+  margin-right: 8px;
+  margin-left: 3px;
+}
+
+
+.export-align {
+  display: inline;
+  float: right;
+  margin-right: 127px;
+}
+
+.export-button {
+  position: absolute;
+  right: 74px;
+}
+
+.refresh-button {
+  height: 22px;
+  position: absolute;
+  right: 35px;
+}
+
+.roastery-chart-group2 {
+  margin-top: 20px;
+  background: yellow;
+}
+
+.chart-header {
+  height: 40px;
+  vertical-align: center;
+  margin-top: 15px;
+  margin-bottom: 17px;
+  line-height: 41px;
+  text-align: center;
+  background: transparent;
+  font-size: 1.70em;
+  font-weight: bold;
+  color: #524336;
+}
+
+/* Leaflet map container*/
+#mapid {
+  height: 370px;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+#manage-view1 {
+  height: 257px;
+  margin-top: 30px;
+  margin-left: 13px;
+  margin-right: 14px;
+  margin-bottom: 80px;
+}
+
+#manage-view2 {
+  height: 390px;
+  margin-top: 2px;
+  margin-left: 15px;    
+}
+
+#date-slider {
+  margin-top: -35px;
+  margin-left: 57px;
+  margin-right: 57px;
+}
+
+#date-slider .ui-rangeSlider{
+  height: 22px;
+  padding-top: 40px;
+}
+
+#date-slider .ui-rangeSlider-bar{
+  background: #8c7f73;
+  height: 22px;
+  margin:1px 0;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  cursor:move;
+  cursor:grab;
+  cursor: -moz-grab;
+
+  -webkit-box-shadow: inset 0 2px 6px RGBA(0,0,0,0.5);
+  -moz-box-shadow: inset 0 2px 6px RGBA(0,0,0,0.5);
+  box-shadow: inset 0 2px 6px RGBA(0,0,0,0.5);
+}
+
+#date-slider .ui-rangeSlider-container {
+  height: 22px;
+  border-top: solid 1px #232a32;
+  border-bottom: solid 1px #6a7179;
+  background: #DBD6CB;
+}
+
+#date-slider .ui-rangeSlider-arrow {
+  background: #524336;
+  height: 22px;
+  border-top: solid 1px #232a32;
+  border-bottom: solid 1px #6a7179;
+}
+
+#date-slider .ui-rangeSlider-leftArrow .ui-rangeSlider-arrow-inner {
+  border-right: 10px solid #e8e2d7;
+}
+
+#date-slider .ui-rangeSlider-rightArrow .ui-rangeSlider-arrow-inner {
+  border-left: 10px solid #e8e2d7;
+}
+
+#date-slider .ui-rangeSlider-label {
+  background: #524336;
+}
+
+#date-slider .ui-rangeSlider-label-inner {
+  border-top: 10px solid #524336;
+}
+
+#date-slider .ui-rangeSlider-handle{
+  height:22px;
+}
+
+#dailyDrilldown1 {
+  height: 350px;
+}
+
+#dailyDrilldown2 {
+  height: 350px;
+}
+
+#dailyDrilldown3 {
+  height: 300px;
+}
+
+#dailyDrilldown4 {
+  height: 700px;
+}
+
+.dailyDrilldown-dashlet {
+  padding: 8px;
+}
+
+.dailyDrilldown-header {
+  background: #DBD6CB;
+  font-size: 1.3em;
+}
+
+.dailyDrilldown-title {
+  color: #524336;
+  text-align: center;
+  line-height: 80px;
+  font-weight: bold;
+  font-size: 2.10em;
+}
+
+.dailyDrilldown-title-date {
+  text-align: center;
+  font-size: 0.70em;
+  line-height: 0px;
+}
+
+/*Datatable headers*/
+#coffeeList .jr-mDatatable-header.jr .jr-mDatatable-row.jr .jr-mDatatable-cell.jr {
+  color: #7F3303;
+  font-size: 1.8em;
+}
+
+/*Datatable row group*/
+#coffeeList .jr-mDatatable-row.jr-mDatatable-rowGroup.jr .jr-mDatatable-cell.jr {
+  background-color: transparent;
+  color: #3D1A03;
+  font-size: 1.6em;
+}
+
+#coffeeList .my-selected .jr-mDatatable-cell.jr .jr-jHyperLink.jr .jr-mDatatable-row.jr-mDatatable-rowGroup.jr .jr-mDatatable-cell.jr {
+  color: #03809e !important;
+}
+
+/*Datatable row group - selector*/
+#coffeeList .my-selected .jr-mDatatable-cell.jr {
+  background-color: #FFF !important;
+}
+
+/*Datatable text*/
+#coffeeList .jr-mDatatable-cell.jr {
+  background-color: transparent;
+  color: #3D1A03;
+  font-size: 1.4em;
+}
+
+#coffeeList .jr-mDatatable-cell-text.jr {
+  vertical-align: top;
+
+}
+
+/*Datatable background*/
+#coffeeList .jr-mDatatable.jr {
+  background-color: #D4C0A0;
+}
+
+/*Datatable header style*/
+#coffeeList .jr-mDatatableContainer.jr {
+  outline: none;
+
+}
+
+/*Datatable header style*/
+#coffeeList .jr-mDatatableContainer.jr .jr-mDatatable-cell.jr-jHyperLink {
+  border: none;
+
+}
+
+/*Datatable header style*/
+#coffeeList .jr-mDatatable-cellRowlabel.jr-mDatatable-cellField.jr,
+#coffeeList .jr-mDatatable-cellColumnlabel.jr-mDatatable-cellField.jr,
+#coffeeList .jr-mDatatable-header.jr .jr-mDatatable-row.jr {
+  background-color: transparent;
+  font-style: bold;
+}
+
+/*Datatable odd row background color*/
+#coffeeList .jr-mDatatable-rowOdd.jr {
+  background-color: transparent;
+}
+
+/*Datatable even row background color*/
+#coffeeList .jr-mDatatable-rowEven.jr {
+  background-color: transparent;
+  padding-top: 0.100em;
+  padding-bottom: 0.100em;
+}
+
+#coffeeList .jr-mDatatable-cell-currency.jr, .jr-mDatatable-cell-date.jr, .jr-mDatatable-cell-number.jr, .jr-mDatatable-cell-text.jr {
+  padding-top: 0.200em;
+  padding-bottom: 0.200em;
+}
+
+/*Datatable text style*/
+#coffeeList .jr-mDatatable-cell-text.jr {
+  line-height: 35px;
+  font-style: bold;
+  background-color: transparent;
+}
+
+#coffeeList {
+  height: 440px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#cafeIngredient {
+  width: 92%;
+  height: 350px;
+  margin-left: 55px;
+  margin-bottom: 0px;    
+}
+
+/*Datatable background*/
+#cafeIngredient .jr-mDatatable.jr {
+  background-color: #FFF;
+}
+
+#cafeIngredient .jr-mDatatableCrosstabContainer.jr {
+  outline: none;
+}
+
+/*Datatable headers*/
+#cafeIngredient .jr-mDatatable-header.jr .jr-mDatatable-row.jr .jr-mDatatable-cell.jr {
+  background-color: #8e5f40;
+  font-size: 1.24em;
+  font-weight: bold;
+  color: white;
+}
+
+/*Datatable header style*/
+#cafeIngredient .jr-mDatatable-cellRowlabel.jr-mDatatable-cellField.jr,
+#cafeIngredient .jr-mDatatable-cellColumnlabel.jr-mDatatable-cellField.jr,
+#cafeIngredient .jr-mDatatable-header.jr .jr-mDatatable-row.jr {
+  color: #FFF;
+  font-style: bold;
+}
+
+#cafeIngredient .jr-mDatatable-cell-text.jr {
+  vertical-align: top;
+}
+
+/*Datatable even row*/
+#cafeIngredient .jr-mDatatable-rowEven.jr {
+  background-color: #F0E9DE;
+  padding-top: 0.100em;
+  padding-bottom: 0.100em;
+}
+
+/*Datatable odd row*/
+#cafeIngredient .jr-mDatatable-rowOdd.jr {
+  background-color: #E9DFD0;
+  padding-top: 0.100em;
+  padding-bottom: 0.100em;
+}
+
+#cafeIngredient .jr-mDatatable-cell-currency.jr, .jr-mDatatable-cell-date.jr, .jr-mDatatable-cell-number.jr, .jr-mDatatable-cell-text.jr {
+  padding-top: 0.200em;
+  padding-bottom: 0.200em;
+}
+
+/*Datatable text style*/
+#cafeIngredient .jr-mDatatable-cell-text.jr {
+  line-height: 25px;
+  font-style: bold;
+  background-color: transparent;
+}
+
+/*Crosstab side panel*/
+#cafeIngredient .jr-mDatatable-cellRowlabel.jr-mDatatable-cellField.jr {
+  background-color: #E0D2BC;
+  font-weight: bold;
+  color: black;
+}
+
+/*Crosstab body headers*/
+#cafeIngredient .jr-mDatatable-cellRowlabel.jr-mDatatable-cellField.jr :hover {
+  color: #C77918;
+  cursor: pointer;
+}
+
+#cafeIngredient .my-selected .jr-mDatatable-cell.jr{
+  background: #FFF3CA!important;
+  font-size: 16px!important;
+  color: black!important;
+}
+
+#cafeIngredient .jr-mDatatable-cell.jr {
+  color: black;
+  font-size: 1.14em;
+  font-weight: normal;
+}
+
+#cafeIngredient .jr-mAdhoc-visualization-launcher.jr {
+  display: none;
+}
+
+.drinkGroup {
+  margin-left: 30px;
+  margin-right: -60px;
+  font-weight: bold;
+}
+
+.singleDrink {
+    margin-bottom: 10px;
+    margin-left: -15px;
+    min-height: 110px;
+    max-width: 220px;
+    min-width: 200px;
+    padding-left: 0;
+    padding-right: 0;
+    border: 3px solid transparent;
+    transition: border .3s ease-in-out;
+}
+
+.singleDrink:focus {
+  border: 3px solid #F0E9DF;
+  border-radius: 5px;
+  outline: 0;
+}
+
+.singleDrink:hover {
+  border: 4px solid #C57828;
+  border-radius: 5px;
+  transition: border .5s ease-in-out;
+}
+
+.singleDrinkClick {
+  border: 6px solid #C57828;
+  transition: border .5s ease-in-out;
+}
+
+.singleDrink:active {
+  border: 4px solid #F0E9DF;
+  border-radius: 5px;
+  transition: border .09s ease-in-out;
+}
+
+.drinkImage {
+  min-width: 80px;
+  max-width: 200px;    
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.drinkDetails {
+  margin-top: 10px;
+  padding-left: 4px;
+  padding-right:0;
+  color: black;
+}
+
+.drinkTitle {
+  margin-bottom: 8px;
+  font-size: 1.16em;
+  font-weight: bold;
+}
+
+.drinkCaf {
+  margin-bottom: 2px;
+}
+
+.drinkSug {
+
+}
+
+.drinkData {
+  color: #b76907;
+}
+
+.primaryDrinkGroup {
+    margin-left: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 50px;
+}
+
+.primaryDrink {
+    left: 4px;
+    top: 5px;
+    margin-bottom: 60px;
+}
+
+#iconPlus {
+  position: absolute;
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  top: 50px;
+  left: 5px;
+}
+
+.primaryDrinkDetails {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.primaryDrinkTitle {
+  display: inline-block;
+  padding-top: 42px;
+  padding-left: 8px;
+  padding-right: 3px;
+  font-size: 2.0em;
+  font-weight: bold;
+}
+
+.chart-label-group {
+  position: absolute;
+  width: 110px;
+  top: 103px;
+  left: 290px;
+}
+
+.chart-label {
+  font-size: 1.20em;
+  padding-bottom: 4px;
+}
+
+.plus-minus {
+  float: right;
+  font-size: 1.05em;
+  font-weight: bold;
+  color: #B76924;
+}
+
+.coffee {
+  color: #3D1A03;
+}
+
+.espresso {
+  color: #7F3303;
+}
+
+.water {
+  color: #03A4CA;
+}
+
+.milk {
+  color: #EDEDED;
+}
+
+.cream {
+  color: #FFF3CA;
+}
+
+.liquor {
+  color: #C77918;
+}
+
+.perChartContainer {
+  position: absolute;
+  height: 180px;
+  width: 200px;
+  top: 45px;
+  left: 350px;
+  margin-top: 18px;
+  margin-bottom: 5px;
+  padding-left: 4px;
+  padding-right: 0;
+  padding-top: 2px;
+}
+
+#drinkPerChart .jr-mAdhoc-visualization-launcher.jr {
+  display: none;
+}
+
+/*Top right icons - with report run icon*/
+.cafeIcons {
+  float: right;
+}
+
+/*Top right icons - with report run icon*/
+.runReportIcons {
+    display: inline-block;
+    margin-top: 26px;
+}
+
+#orderCount {
+  display: inline;
+  position: relative;
+  font-size: 1.0em;
+  left: 59px;
+  top: -15px;
+  color: white;
+}
+
+.icon-collection-run {
+  height: 65px;
+  padding-right: 15px;
+}
+
+#collectionRunSelected {
+  display: inline;
+  position: relative;
+  left: 98px;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#collectionRunSelected:hover {
+  opacity: 1;
+}
+
+.metric-understock {
+  height: 120px;
+}
+
+.metric-overstock {
+  height: 120px;
+}
+
+.shot-num {
+  display: inline;
+  position: relative;
+  top: 30px;
+  height: 58px;
+  padding-right: 115px;
+}
+
+.bean-decaf {
+  display: inline;
+  position: relative;
+  top: 30px;
+  height: 53px;
+  padding-right: 10px;
+}
+
+.bean-half {
+  display: inline;
+  position: relative;
+  top: 30px;
+  height: 53px;
+  padding-right: 10px;
+}
+
+.bean-caf {
+  display: inline;
+  position: relative;
+  top: 30px;
+  height: 53px;
+  padding-right: 10px;
+}
+
+.drink-filter-group {
+    display: inline-block;
+}
+
+.filterCupGroup {
+    margin-top: 38px;
+    margin-bottom: 22px;
+}
+
+.icon-a-z {
+  display: inline;
+  position: relative;
+  left: 93px;
+  top: -5px;
+}
+.icon-caf {
+  display: inline;
+  position: relative;
+  left: 127px;
+  top: -5px;
+}
+
+.icon-sug {
+  display: inline;
+  position: relative;
+  left: 180px;
+  top: -5px;
+}
+
+#filterAlpha {
+  height: 54px;
+}
+
+#filterCaf {
+  height: 50px;
+}
+
+#filterSug {
+  height: 50px;
+}
+
+/*Slider styles*/
+.slider.slider-horizontal .slider-selection, .slider.slider-horizontal .slider-track-low, .slider.slider-horizontal .slider-track-high {
+  height: 3px;
+  top: 0;
+  bottom: 0;
+}
+
+.slider.slider-horizontal .slider-track {
+  height: 3px;
+}
+
+.slider.slider-horizontal {
+  width: 100px;
+}
+
+.slider-track-low, .slider-track-high {
+  background: #EDEDED;
+}
+
+.slider-handle.custom {
+  background: transparent none;
+}
+
+/*Sugar slider styles*/
+.slider-sug {
+  display: inline;
+  position: relative;
+  height: 40px;
+  left: 197px;
+  top: -5px;
+}
+
+.slider-sug .slider-handle.custom::before {
+  line-height: 8px;
+  font-size: 32px;
+  content: '\029BF';
+  color: #4195A9;
+}
+
+.slider-sug .slider-selection {
+  background: #57BFC1;
+}
+
+/*Caffeine slider styles*/
+.slider-caf {
+  display: inline;
+  position: relative;
+  height: 40px;
+  left: 137px;
+  top: -5px;
+}
+
+.slider-caf .slider-handle.custom::before {
+  line-height: 8px;
+  font-size: 28px;
+  content: '\029BF';
+  color: #8D433B;
+}
+
+.slider-caf .slider-selection {
+  background: #B5564B;
+}
+
+.drinkHover:hover object {
+  opacity: 0.5;
+  transition: .8s;
+}
+
+.drinkHover:hover .drinkTitle {
+  color: white;
+  cursor: default;
+  transition: .5s;
+  font-size: 1.2em;
+}
+
+#svg1 object, #svg2 object, #svg3 object, #svg4 object, #svg5 object, #svg6 object, #svg7 object, #svg8 object,
+#svg9 object, #svg10 object, #svg11 object, #svg12 object, #svg13 object,#svg14 object, #svg15 object {
+  pointer-events: none;
+}
+
+#svg1 object {
+  fill: red;
+}
+
+.cup-template {
+  display: inline-block;
+  padding-right: 0;
+  padding-left: 0;
+  position: relative;
+  left: 31px;
+  top: 50px;
+}
+
+.iSlider-group {
+    display: inline-block;
+    position: relative;
+    padding-right: 5px;
+}
+
+div.iSliders {
+  margin: 0px auto;
+  background-color: #D4C0A0;
+  width: 100%;
+  padding-left: 60px;    
+}
+
+div.iSlider {
+  display: block;
+  width: 80%;
+  margin: 30px auto;
+  background-color: #E0D2BC;
+  height: 3px;
+}
+
+div.iSlide {
+  width: 33%;
+  height: 100%;
+  position: relative;
+}
+
+div.iControl {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+// padding: 40px;
+  background: #7F3303;
+  position: absolute;
+  right: -7px;
+  top: -2px;
+  margin-top: -7px;
+  cursor: pointer;
+}
+
+.iLabel {
+  position: relative;
+  font-size: 1.30em;
+  font-weight: bold;
+  left: -110px;
+  top: -10px;
+}
+
+.syrup {
+  color: #8e6b6c;
+}
+
+div.syrup {
+  background: #a07a7c;
+}
+
+div.syrup-selected {
+  background: #BD989A;
+}
+
+.water {
+  color: #039fc4;
+}
+
+div.water {
+  background: #03A4CA;
+}
+
+div.water-selected {
+  background: #6CB2B5;
+}
+
+
+.milk {
+  color: #f9f9f9;
+}
+
+div.milk {
+  background: #EDEDED;
+}
+
+div.milk-selected {
+  background: #E0D6C6;
+}
+
+.cream {
+  color: #fcedae;
+}
+
+div.cream {
+  background: #FEEDA6;
+}
+
+div.cream-selected {
+  background: #E9D6A3;
+}
+
+.liquor {
+  color: #b26c15;
+}
+
+div.liquor {
+  background: #C77918;
+}
+
+div.liquor-selected {
+  background: #CE9D5C;
+}
+
+.espresso {
+  color: #7F3303;
+}
+
+div.espresso {
+  background: #7F3303;
+}
+
+div.espresso-selected {
+  background: #AA7A52;
+}
+
+.coffee {
+  color: #3D1A03;
+}
+
+div.coffee {
+  background: #3D1A03;
+}
+
+div.coffee-selected {
+  background: #896D52;
+}
+
+.cold {
+  position: absolute;
+  height: 312px;
+  left: -40px;
+  top: -25px;
+  visibility: hidden;
+}
+
+.hot {
+  position: absolute;
+  height: 312px;
+  left: -40px;
+  top: -25px;
+}
+
+.whipped-cream {
+  position: absolute;
+  height: 312px;
+  left: -41px;
+  top: -28px;
+  visibility: hidden;
+}
+
+.ice-group {
+    margin-top: 50px;
+    height: 65px;
+}
+
+.whip-group {
+    height: 65px;
+}
+
+.label-ice { 
+    position: relative;
+    float: right;
+    right: 26px;
+    margin-top: 4px;
+    margin-right: -18px;
+    color: #606060;
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+.label-whip { 
+    position: relative;
+    float: right;
+    right: 26px;
+    margin-top: 4px;
+    margin-right: -18px;
+    color: #606060;
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+.switch2 {
+    position: relative;
+    float: right;
+    width: 48px;
+    height: 27px;
+}
+
+.switch2 input {display:none;}
+
+.slider2 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #E9DFD0;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider2:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 21px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider2 {
+  background-color: #4bc3e5;
+}
+
+input:focus + .slider2 {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider2:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider2.round {
+  border-radius: 20px;
+}
+
+.slider2.round:before {
+  border-radius: 50%;
+}
+
+.switch3 {
+    position: relative;
+    float: right;
+    width: 48px;
+    height: 27px;
+}
+
+.switch3 input {
+    display:none;
+}
+
+.slider3 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 48px;
+    height: 27px;
+    background-color: #E9DFD0;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider3:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 4px;
+    bottom: 3px;  
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider3 {
+  background-color: #f2e19b;
+}
+
+input:focus + .slider3 {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider3:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider3.round {
+  border-radius: 20px;
+}
+
+.slider3.round:before {
+  border-radius: 50%;
+}
+
+.btn1 {
+  float: right;
+  margin-top: 90px;
+  margin-bottom: 40px;
+  width: 120px;
+  height: 55px;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #3D1A03;
+  background: #E9DFD0;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: none;
+  font-weight: bold;
+  font-size: 1.60em;
+  transition:1s;
+}
+
+.btn1:hover {
+  background: #B08F7A;
+  color: #fff;
+  text-decoration: none;
+  transition:1s;
+}
+
+.btn1:active {
+  background: #563128;
+  color: #FFF3CA;
+  transition:0s;
+}
+
+button:focus {outline:0;}
+
+.label-qty { 
+  position: relative;
+  display: inline-block;    
+  margin-right: 6px; 
+  margin-top: -5px;    
+  margin-bottom: 10px;   
+  color: #524236;
+  font-size: 1.55em;
+  font-weight: bold;    
+}
+
+.qty-group {
+  position: relative;    
+  display: inline-block;
+  right: 30px;    
+  float: left;    
+  margin-top: 25px;    
+  margin-left: 0px;     
+}
+
+[name=quantity] {
+  background: #E0D2BC;
+  border-radius: 8px;
+  padding: 7px;
+  padding-left: 8px;
+  border: 0;
+  width: 80px;
+  font-size: 1.4em;
+  text-align: left;
+}
+
+.controls-wrapper {
+    position: relative;
+  display: inline-block;
+}
+
+.minus,
+.plus {
+  position: relative;
+  display: inline-block;    
+  padding: 4px;
+  font-size: 1.6em;
+  text-decoration: none !important;
+  background: #E0D2BC;
+  width: 24px;
+  text-align: center;
+  color: #8E5F40 !important;
+}
+
+.minus:hover,
+.plus:hover {
+  color: #FFF3CA !important;
+  background: #B08F7A;
+  text-decoration: none !important;
+}
+
+.minus:active,
+.plus:active {
+  color: white;
+  text-decoration: none !important;
+}
+
+.minus {
+  border-radius: 0.2em;
+}
+
+.plus {
+  border-radius: 0.2em;
+}
+
+.checkedSyrup {
+  position: absolute;
+  height: 18px;
+  left: -146px;
+  top: -9px;
+}
+
+.checkedWater {
+  position: absolute;
+  height: 18px;
+  left: -146px;
+  top: -9px;
+}
+
+.checkedMilk {
+  position: absolute;
+  height: 18px;
+  left: -146px;
+  top: -9px;
+}
+
+.checkedCream {
+  position: absolute;
+  height: 18px;
+  left: -146px;
+  top: -9px;
+}
+
+.checkedLiquor {
+  position: absolute;
+  height: 18px;
+  left: -146px;
+  top: -9px;
+}
+
+.checkedEspresso {
+  position: absolute;
+  height: 18px;
+  left: -146px;
+  top: -9px;
+}
+.checkedCoffee {
+  position: absolute;
+  height: 18px;
+  left: -146px;
+  top: -9px;
+}
+
+.ingHeader {
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    margin-bottom: 15px;
+    margin-left: 70px;
+    font-size: 1.52em;
+    font-weight: normal;
+    color: #534336;
+}
+
+.selectedIngHeader {
+  font-size: 1.13em;
+  font-weight: bold;
+}
+
+.location-totals {
+    display: inline-block;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: bold;   
+    text-align: center;
+    color: #514338;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/*screen-xs*/
+@media (max-width: 768px) { 
+  .location-totalSize{font-size: 5.5vw;}
+}
+/*screen-sm*/
+@media (min-width: 768px) and (max-width: 992px) { 
+  .location-totalSize{font-size: 3.8vw;}
+}
+/*screen-md*/
+@media (min-width: 992px) and (max-width: 1200px) { 
+  .location-totalSize{font-size: 1.80vw;}
+}
+/*screen-lg corresponds with col-lg*/
+@media (min-width: 1200px) {  
+  .location-totalSize{font-size: 1.65vw;}
+}
+
+.location-sales {
+    display: inline-block;
+    margin-bottom: -12px;
+    color: #DB6F2B;
+}
+
+.location-cost {
+    display: inline-block;
+    margin-bottom: -12px;
+    color: #2399ba;
+}
+
+.location-profit {
+    display: inline-block;
+    margin-bottom: -12px;
+    color: #a33d1a;   
+}
+
+.menu-icon-cafe {
+    float: right;
+    margin-top: 35px;
+    margin-right: 0px;
+    height: 65px;
+}
+
+.menu-icon-roast {
+    float: right;
+    margin-top: 35px;
+    margin-left: 20px;
+    height: 65px;
+}
+
+.menu-icon-locations {
+    float: right;
+    margin-top: 35px;
+    padding-right: 0px;
+    height: 65px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: -80px;
+    top: 93px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1 !important;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #524336 !important;
+    font-size: 1.35em;
+    font-weight: bold;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    color: white !important;
+    background-color: #7D340D;
+    text-decoration: none;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .menu-icon-roast {
+    
+}
+
+.roast-tag-input {
+    margin-top: 35px;
+}
+
+.roast-btn {
+    background-color: white;
+    display: inline-block; 
+    align-content: center;
+    float: right;
+    height: 40px;
+    width: 130px;
+    font-size: 1.3em !important;
+    font-weight: bold !important;
+    color: #7D340D;
+    margin-top: 46px;
+}
+
+.roast-btn:hover {
+    color: white !important;
+    background-color: #7D340D;
+    text-decoration: none;
+}
+    
+.left-panel {
+    width: 100%;
+    height: auto;
+    margin-top: 20px; 
+}
+
+.roast-gauges {
+    margin-right: 45px;
+    margin-left: 10px;
+}
+
+.roast-large-gauge {
+    display: inline-block;
+    width: 25%;
+    min-width: 185px;
+    height: auto;
+    text-align: center;
+}
+
+.roast-large-gauge p {
+    text-align: center;
+    font-size: 2.0em;
+    color: #664314;  
+}
+
+.roast-small-gauge {
+    display: inline-block;
+    width: 24%;
+    min-width: 160px;
+    height: auto;
+    text-align: center;
+}
+
+.roast-small-gauge p {
+    text-align: center;
+    font-size: 1.5em;
+    color: #0D567F; 
+}
+
+.liquidFillGaugeText { 
+    font-family: Helvetica; 
+    font-weight: bold; 
+}
+
+.drop-input {
+    margin-top: 20px;
+}
+
+.roast-chart1 {  
+    margin-top: 20px;
+    margin-left: 60px;
+    background-color: transparent;
+    float: center;
+    width: 90%;
+}
+
+.roast-table {
+    margin-top: 30px;
+    background-color: transparent;
+    width: 100%;
+}
+
+.roast-chart2 { 
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+.roast-additional {
+    background-color: #DBD6CC;
+}
+
+
+#container1 {
+    width: 100%;
+    height: 488px;
+}
+
+#container2 {
+    height: auto;
+}
+
+#container3 {
+    height: 150px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+
+.cafe-header {
+    margin-right: 0px;
+    margin-left: 0px;   
+}
+
+.drinkCol1 {
+    min-height: 400px;
+}
+
+.drinkCol2 {
+    min-height: 400px;
+}
+
+.drinkCol3 {
+    min-height: 400px;
+}
+
+/*screen-xs*/
+@media (max-width: 768px) { 
+  .drinkGroup-margin{margin-left: 130px; margin-right: 30px;}
+}
+/*screen-sm*/
+@media (min-width: 768px) and (max-width: 992px) { 
+  .drinkGroup-margin{margin-left: 10px; margin-right: -300px;}
+}
+/*screen-md*/
+@media (min-width: 992px) and (max-width: 1200px) { 
+  .drinkGroup-margin{margin-left: 120px; margin-right: 120px;}
+}
+
+/*screen-lg corresponds with col-lg*/
+@media (min-width: 1200px) {  
+  .drinkGroup-margin{margin-left: 55px; margin-right: -15px;}
+}

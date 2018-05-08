@@ -1,0 +1,75 @@
+/******** Styles for chart (bar) ********/
+#bar {
+    height: 535px;
+    margin-top: 200px;
+    margin-left: 15px;    
+}
+
+/*Remove the default visualization selector
+#bar .jr-mAdhoc-visualization-launcher.jr {
+    display: none;
+}
+*/
+
+/******** Ad Hoc View Resource Overrides ********/
+/* Chart Selector dialog list */
+div .jr-mDialog-body.jr .jr-mVisualchooser.jr .jr-mVisualchooser-panel.jr {
+  background-color: #405862;
+}
+
+/* Chart Selector header background */
+div .jr-mDialog-header.jr {
+  background-color: #EDEDED;
+  height: 3.509em;
+}
+
+/* Chart Selector header title */
+div .jr-mDialog-header-title.jr {
+  color: #405862;
+  font-size: 1.3em;
+  font-weight: 800;
+}
+
+/* Chart Selector header title */
+div .jr-mButton-icon.jr-mIcon.jr-cancel.jr {
+  color: #405862;
+  font-size: 1.882em;
+  font-weight: 700;
+}
+
+/* Chart Selector dialog text color */
+div .jr-mDialog-body.jr .jr-mVisualchooser.jr .jr-mVisualchooser-panel.jr .jr-mTab-item.jr .jr-mTab-item-label.jr {
+  color: #F9F9F9;
+}
+
+/* Chart Visual Chooser label selected */
+div .jr-mVisualchooser-menu-item.jr-isSelected.jr .jr-mVisualchooser-menu-item-label.jr {
+  color: #039dc1;
+}
+
+/* Chart Selector dialog hovered item */
+div .jr-mTabReverse.jr .jr-mTab-item.jr-isHovered.jr {
+  background-color: #2C110A;
+  color: #FFF;
+}
+
+div .jr-mTabReverse.jr .jr-mTab-item.jr-isHovered.jr .jr-mTab-item-label.jr {
+  color: #FFF !important;
+}
+
+div .jr-mVisualchooser-body.jr .jr-mVisualchooser-menu.jr {
+  background-color: #F6F6F6;
+}
+
+div .jr-mTabReverse.jr .jr-mTab-item.jr-isActive.jr {
+  background-color: #F6F6F6;
+}
+
+div .jr-mTabReverse.jr .jr-mTab-item.jr-isActive.jr .jr-mTab-item-label.jr {
+  color: #03809e !important;
+}
+
+/* Loading Overlay for Ad Hoc Views */
+div .jr-mOverlay.jr {
+  background-color: rgba(0, 0, 0, 0);
+}

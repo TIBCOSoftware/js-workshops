@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>TIBCO Jaspersoft demo - UrbanRoast</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../resources/stylesheets/bootstrap.min.css"/>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../resources/stylesheets/report-viewer.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css"/>
+    
+</head>
+<body>
+<div id="main" class="container-fluid">
+    <div class="row">
+        <div class="col-md-12" style="background: #D4C0A0">
+            
+            <div class="col-md-3">
+                
+            </div>
+
+            <div class="col-md-6">
+                <div class="cafe-report-viewer">
+                    <div class="cafe-report-viewer-header">
+                        &nbsp;&nbsp;
+                        <img id="previousPage" class="next-button" src="../../../resources/images/backward4.png">
+                        <img id="nextPage" class="previous-button" src="../../../resources/images/forward4.png">
+                        <div class="page-range">
+                            <span>Page Range:  <input type="text" id="pageRange" class="page-input"></input></span>
+                        </div>
+                        <button id="plusZoom" disabled>+</button>
+                        <button id="minusZoom" disabled>-</button>
+                        <button id="widthZoom" disabled>Center</button>
+                        <div class="export-align">
+                            <!--This div replaced with export selector-->
+                            <div id="export-selector"></div>
+                        </div>
+                        <button id="button" class="export-button" disabled>Export</button>
+                        <img id="buttonRefresh" class="refresh-button" src="../../../resources/images/refresh-icon.png">
+                    </div>
+                    <div id="roastery-report" class="contained-report"></div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                  
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--JAVASCRIPT FILES -->    
+    
+<!-- jQuery -->
+<script type="text/javascript" src="../../../resources/javascripts/jquery.min.js"></script>
+    
+<!-- Bootstrap -->
+<script type="text/javascript" src="../../../resources/javascripts/bootstrap.min.js"></script>
+    
+<!-- Visualize.js -->
+<script type='text/javascript' src="http://localhost:8081/jasperserver-pro/client/visualize.js?_opt=true"></script>
+    
+<script type="text/javascript" src="javascripts/cafe-report1-main.js"></script>
+
+</body>
+</html>

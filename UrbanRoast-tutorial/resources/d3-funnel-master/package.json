@@ -1,0 +1,57 @@
+{
+  "name": "d3-funnel",
+  "version": "1.1.1",
+  "description": "A library for rendering SVG funnel charts using D3.js",
+  "author": "Jake Zatecky",
+  "license": "MIT",
+  "keywords": [
+    "d3",
+    "funnel",
+    "pyramid",
+    "svg",
+    "chart"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jakezatecky/d3-funnel"
+  },
+  "bugs": "https://github.com/jakezatecky/d3-funnel/issues",
+  "main": "dist/d3-funnel.js",
+  "scripts": {
+    "gh-deploy": "git subtree push --prefix examples/dist origin gh-pages",
+    "prepublishOnly": "gulp build"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.17",
+    "babel-eslint": "^7.1.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.1.2",
+    "babel-preset-stage-0": "^6.1.2",
+    "browser-sync": "^2.18.6",
+    "chai": "^4.0.1",
+    "chai-spies": "^0.7.1",
+    "eslint": "^4.3.0",
+    "eslint-config-takiyon": "^0.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-eslint": "^4.0.0",
+    "gulp-header": "^1.7.1",
+    "gulp-mocha-phantomjs": "^0.12.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-scss-lint": "^0.5.0",
+    "gulp-uglify": "^3.0.0",
+    "lodash": "^4.0.0",
+    "mocha": "^3.0.0",
+    "webpack": "^3.4.1",
+    "webpack-stream": "^4.0.0"
+  },
+  "dependencies": {
+    "d3": "^4.2.0",
+    "d3-selection": "^1.0.1",
+    "d3-selection-multi": "^1.0.0",
+    "eslint-import-resolver-webpack": "^0.8.1",
+    "shortid": "^2.2.6"
+  }
+}

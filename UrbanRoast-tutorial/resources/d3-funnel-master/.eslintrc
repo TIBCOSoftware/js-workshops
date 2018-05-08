@@ -1,0 +1,14 @@
+{
+	"extends": "takiyon",
+	"env": {
+		"browser": true,
+		"mocha": true
+	},
+	"settings": {
+		"import/resolver": {
+			"webpack": {
+				"config": "webpack.test.config.js"
+			}
+		}
+	}
+}

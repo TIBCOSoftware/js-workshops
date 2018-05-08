@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TIBCO Jaspersoft demo - UrbanRoast</title>
+
+    <meta charset="utf-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../resources/stylesheets/bootstrap.min.css"/>
+    <!-- Custom CSS -->
+    <link rel='stylesheet' href="stylesheets/style.css" />
+
+
+    <style>
+        /*Datatable header style*/
+        #dailyDrilldown3 .jr-mDatatable-cellRowlabel.jr-mDatatable-cellField.jr,
+        #dailyDrilldown3 .jr-mDatatable-cellColumnlabel.jr-mDatatable-cellField.jr,
+        #dailyDrilldown3 .jr-mDatatable-header.jr .jr-mDatatable-row.jr {
+            background-color: #CD853F;
+            color: #FFF8DC;
+        }
+
+        /*Datatable header font color*/
+        #dailyDrilldown3 .jr-mDatatable-header.jr .jr-mDatatable-row.jr .jr-mDatatable-cell.jr {
+            color: #FFF8DC;
+            background-color: #CD853F;
+        }
+
+        /*Datatable group background color*/
+        #dailyDrilldown3 .jr-mDatatableCrosstab-header-rowlabelsContainer.jr .jr-mDatatable-cellRowlabel.jr,
+        #dailyDrilldown3 .jr-mDatatable-row.jr-mDatatable-rowGroup.jr .jr-mDatatable-cell.jr {
+            background-color: #DEB887;
+            color: #FFF8DC;
+        }
+
+        /*Datatable odd row background color*/
+        #dailyDrilldown3 .jr-mDatatable-rowOdd.jr {
+            background-color: #E8E6DE;
+        }
+
+        /*Datatable even row background color*/
+        #dailyDrilldown3 .jr-mDatatable-rowEven.jr {
+            background-color: #DBD6CB;
+        }
+
+        /*Datatable text style*/
+        #dailyDrilldown3 .jr-mDatatable-cell-text.jr {
+            line-height: 30px;
+            font-style: italic;
+        }
+
+        #dailyDrilldown3 .jr-mDatatable-body.jr .jr-mDatatable-cellTotal.jr {
+            background-color: #E8E6DE;
+        }
+
+        /*Datatable header style*/
+        #dailyDrilldown3 .jr-mDatatable-cellRowlabel.jr-mDatatable-cellField.jr,
+        #dailyDrilldown3 .jr-mDatatable-cellColumnlabel.jr-mDatatable-cellField.jr,
+        #dailyDrilldown3 .jr-mDatatable-header.jr .jr-mDatatable-row.jr {
+            /*background-color: #8e8a81;*/
+            /*background-color: #706d66;*/
+            background-color: #D6D1C7;
+            font-size: 1.10em;
+            font-weight: bold;
+            color: #4c4c4c;
+        }
+
+        /*Datatable header font color*/
+        #dailyDrilldown3 .jr-mDatatable-header.jr .jr-mDatatable-row.jr .jr-mDatatable-cell.jr {
+            color: #fcf9ed;
+            /*background-color: #8e8a81;*/
+            /*background-color: #706d66;*/
+            font-size: 1.02em;
+            font-weight: bold;
+            background-color: #8A7D71;
+            /* old color #9B978D */
+        }
+
+        /*Datatable group background color*/
+        #dailyDrilldown3 .jr-mDatatableCrosstab-header-rowlabelsContainer.jr .jr-mDatatable-cellRowlabel.jr,
+        #dailyDrilldown3 .jr-mDatatable-row.jr-mDatatable-rowGroup.jr .jr-mDatatable-cell.jr {
+            background-color: #a09c92;
+            color: #FFF8DC;
+        }
+
+        /*Datatable odd row background color*/
+        #dailyDrilldown3 .jr-mDatatable-rowOdd.jr {
+            background-color: #E8E6DE;
+        }
+
+        /*Datatable even row background color*/
+        #dailyDrilldown3 .jr-mDatatable-rowEven.jr {
+            background-color: #DBD6CB;
+        }
+
+        /*Datatable text style*/
+        #dailyDrilldown3 .jr-mDatatable-cell-text.jr {
+            line-height: 30px;
+            font-style: italic;
+        }
+
+        #dailyDrilldown3 .jr-mDatatable-body.jr .jr-mDatatable-cellTotal.jr {
+            background-color: #E8E6DE;
+        }
+          
+    </style>
+</head>
+<body>
+
+<div id="main" class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-3">
+                <br>
+                <img src="../../../resources/images/new_logo1.png" height="80">
+                <img src="../../../resources/images/menu5.png" height="25">
+            </div>
+
+            <div class="col-md-6">
+                <div class="dailyDrilldown-title">Store Performance Metrics
+                    <div class="dailyDrilldown-title-date">
+                        <span ><span id="location">(All Locations)</span> -
+                            <span style="color: #C77918;" id="date"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="col-md-1" style="padding-right: 0px; float: right;">
+                    <div class="dropdown">
+                        <img class="menu-icon-locations" src="../../../resources/images/menu-icons/menu-icon-midbrown.png">
+                        <div class="dropdown-content">
+                            <a href="../../module3/3-1/cafe.html">Cafe</a>
+                            <a href="../../module2/2-1/roast.html">Roastery</a>
+                            <a href="locations.html">Locations</a>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 30px; margin-right: 20px; margin-left: 20px;" >
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="chart-header dailyDrilldown-header">Net Sales by Gross Profit</div>
+                    <div id="dailyDrilldown1" class="dailyDrilldown-dashlet"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="chart-header dailyDrilldown-header">Net Sales, Total Cost by Profit Margin</div>
+                    <div id="dailyDrilldown2" class="dailyDrilldown-dashlet"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 15px">
+                    <div class="chart-header dailyDrilldown-header">Location Metrics</div>
+                    <div id="dailyDrilldown3" class="dailyDrilldown-dashlet"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="chart-header dailyDrilldown-header">Labor - Food - Facility Cost by Gross Profit</div>
+            <div id="dailyDrilldown4" class="dailyDrilldown-dashlet"></div>
+        </div>
+    </div>
+    <br><br><br><br>
+
+</div>
+
+<!--JAVASCRIPT FILES -->
+    
+<!-- jQuery -->
+<script type="text/javascript" src="../../../resources/javascripts/jquery.min.js"></script>
+    
+<!-- Bootstrap -->
+<script type="text/javascript" src="../../../resources/javascripts/bootstrap.min.js"></script>
+
+<!-- Visualize.js -->
+<script type='text/javascript' src="http://localhost:8081/jasperserver-pro/client/visualize.js?_opt=false"></script>
+    
+<script type="text/javascript" src="javascripts/locations-dashboard2.js"></script>
+
+</body>    
+</html>

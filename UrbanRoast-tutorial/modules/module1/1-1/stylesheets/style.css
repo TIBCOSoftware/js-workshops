@@ -1,0 +1,41 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.logo {
+    height: 80px;
+}
+
+.triangle {
+     height: 25px;
+}
+
+.locations {
+    background-color: #e8e6de;
+    margin-top: 12px;
+}
+
+.locations .lower { 
+    background-color: #DBD6CB;
+}
+
+/* Map header */
+.chart-header {
+  height: 40px;
+  vertical-align: center;
+  margin-top: 15px;
+  margin-bottom: 17px;
+  line-height: 41px;
+  text-align: center;
+  background: transparent;
+  font-size: 1.70em;
+  font-weight: bold;
+  color: #524336;
+}
+
+/* Leaflet map container*/
+#mapid {
+  height: 570px;
+  margin-left: 5px;
+  margin-top: 65px;    
+}

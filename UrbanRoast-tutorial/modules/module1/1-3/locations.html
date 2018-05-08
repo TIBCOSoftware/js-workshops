@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TIBCO Jaspersoft demo - UrbanRoast</title>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css"/>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../resources/stylesheets/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../resources/stylesheets/bootstrap-multiselect.css"/>
+    
+    <!-- Date Range Slider -->
+    <link rel="stylesheet" type="text/css" href="../../../resources/stylesheets/iThing.css"/>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../resources/javascripts/leaflet/leaflet.css"/>
+    
+    <style>
+        /*Datatable header*/
+        #manage-view1 .jr-mDatatable-header.jr .jr-mDatatable-row.jr .jr-mDatatable-cell.jr {
+            color: #FFF8DC;
+            background-color: #8c6956;
+            font-size: 1.25em; 
+            height: 30px;
+        }
+
+        /*Datatable group*/
+        #manage-view1 .jr-mDatatableCrosstab-header-rowlabelsContainer.jr .jr-mDatatable-cellRowlabel.jr,
+        #manage-view1 .jr-mDatatable-row.jr-mDatatable-rowGroup.jr .jr-mDatatable-cell.jr {
+            background-color: #c49473;
+            color: #FFF8DC;
+            font-size: 1.06em;
+            height: 30px;
+        }
+
+        /*Datatable text*/
+        #manage-view1 .jr-mDatatable-cell-text.jr {
+            
+            font-size: 1.06em;
+            height: 30px;
+        }
+        
+        /*Datatable odd row*/
+        #manage-view1 .jr-mDatatable-rowOdd.jr {
+            background-color: #F0E9DF;
+            font-size: 1.06em;
+            height: 30px;
+        }
+
+        /*Datatable even row*/
+        #manage-view1 .jr-mDatatable-rowEven.jr {
+            background-color: #e5dacc;
+            font-size: 1.06em;
+            height: 30px;
+        }
+        
+        #manage-view1 .jr-mDatatable-cell.jr-mDatatable-cellRowlabel.jr.jr-mDatatable-cellField.jr-jHyperLink.jr-jHyperLink-rowHeader {
+            color: #FFF8DC;
+            background: #C39475;
+        }
+        
+        #manage-view1 .jr-mDatatable-cell.jr-mDatatable-cellRowlabel.jr.jr-mDatatable-cellTotal.jr-jHyperLink.jr-jHyperLink-rowHeader {
+            color: #FFF8DC;
+            background: #C39475;
+        }
+
+        #manage-view1 td.jr-mDatatable-cell.jr-mDatatable-cellValue.jr-mDatatable-cellTotal.jr {
+            background: #F0E9E0;
+            font-size: 1.06em;
+            height: 30px;
+        }
+        
+        #manage-view1 td.jr-mDatatable-cell.jr-mDatatable-cellRowlabel.jr {
+            width: 110px;
+        }
+        
+        #manage-view1 td.jr-mDatatable-cell.jr-mDatatable-cellRowlabel.jr.jr-mDatatable-cellField.jr {
+            width: 240px;
+        }
+
+        /*Datatable header style*/
+        #manage-view2 .jr-mDatatable-cellRowlabel.jr-mDatatable-cellField.jr,
+        #manage-view2 .jr-mDatatable-cellColumnlabel.jr-mDatatable-cellField.jr,
+        #manage-view2 .jr-mDatatable-header.jr .jr-mDatatable-row.jr {
+            background-color: #7f7c74;
+            color: #FFF8DC;
+        }
+
+        /*Datatable header font color*/
+        #manage-view2 .jr-mDatatable-header.jr .jr-mDatatable-row.jr .jr-mDatatable-cell.jr {
+            color: #FFF8DC;
+            /*background-color: #8e8a81;*/
+            /*background-color: #706d66;*/
+            background-color: #7f7c74;
+        }
+        
+        /*Datatable group background color*/
+        #manage-view2 .jr-mDatatableCrosstab-header-rowlabelsContainer.jr .jr-mDatatable-cellRowlabel.jr,
+        #manage-view2 .jr-mDatatable-row.jr-mDatatable-rowGroup.jr .jr-mDatatable-cell.jr {
+            background-color: #D3BFA1;
+            color: #FFF8DC;
+        }
+
+        /*Datatable odd row background color*/
+        #manage-view2 .jr-mDatatable-rowOdd.jr {
+            background-color: #E8E6DE;
+        }
+
+        /*Datatable even row background color*/
+        #manage-view2 .jr-mDatatable-rowEven.jr {
+            background-color: #DBD6CB;
+        }
+
+        /*Datatable text style*/
+        #manage-view2 .jr-mDatatable-cell-text.jr {
+            line-height: 30px;
+            font-style: italic;
+        }
+
+        #manage-view2 .jr-mDatatable-body.jr .jr-mDatatable-cellTotal.jr {
+            background-color: #E8E6DE;
+        }
+        
+        @import url(http://fonts.googleapis.com/css?family=Raleway:400,700);    
+
+        .vizuly {
+            font-family: "Raleway"
+        }    
+
+        #viz_container {
+            background: #E8E6DE;
+            margin:0px auto;
+            width:100%;
+            height:120px;
+            padding-top:0px;
+            border-radius:6px;
+        }
+    </style>
+</head>
+<body style="background-color: #DBD6CB">
+    
+    <div id="main" class="container-fluid">
+
+        <div class="locations-header">
+            <div class="logo col-md-3 col-sm-12">
+                <img src="../../../resources/images/new_logo1.png" style="width: 100%; height: auto;">
+            </div>
+
+            <div class="col-md-2">
+            </div>
+
+            <div class="location-totals col-md-2 col-xs-12 location-totalSize">
+                <p class="location-sales">Sales</p>
+                <div id="salesTotal" class="locationsTotals location-totalSize"></div>
+            </div>
+
+            <div class="location-totals col-md-2 col-xs-12 location-totalSize">
+                <p class="location-cost">Cost</p>
+                <div id="costTotal" class="locationsTotals location-totalSize"></div>
+
+            </div>
+
+            <div class="location-totals col-md-2 col-xs-12 location-totalSize">
+                <p class="location-profit">Profit</p>
+                <div id="profitTotal" class="locationsTotals location-totalSize"></div>
+            </div> 
+            
+            <div class="col-md-1" style="padding-right: 0px;">
+                <div class="dropdown">
+                    <img class="menu-icon-locations" src="../../../resources/images/menu-icons/menu-icon-midbrown.png">
+                    <div class="dropdown-content">
+                        <a href="../../module3/3-1/cafe.html">Cafe</a>
+                        <a href="../../module2/2-1/roast.html">Roastery</a>
+                        <a href="locations.html">Locations</a>
+                    </div>
+                </div>
+            </div>   
+        </div> 
+    </div>
+    
+    <div>
+        <div class="col-md-12" style="background: #E8E6DE">
+            <div class="locations-chart-group1">
+
+                <div class="col-md-5">
+                    <div class="chart-header">Select location to view performance</div>
+                    <div id="mapid"></div>   
+                </div>
+
+                <div class="col-md-7" style="background: #E8E6DE; margin-top: 30px;">
+                    <div id="manage-view2"></div>
+                    <div id="date-slider" style="margin-bottom: 30px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div>
+        <div class="col-md-12" style="background: #DBD6CB;">
+            <div id="manage-view1"></div>
+        </div>
+    </div>
+
+    
+<!--JAVASCRIPT FILES -->
+
+<!-- jQuery -->
+<script type="text/javascript" src="../../../resources/javascripts/jquery.min.js"></script>
+
+<!-- Bootstrap -->
+<script type="text/javascript" src="../../../resources/javascripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../../resources/javascripts/bootstrap-multiselect.js"></script>
+
+<!-- Leaflet -->
+<script src="../../../resources/javascripts/leaflet/leaflet.js"></script>
+
+<!-- Date Range Slider -->
+<script src="../../../resources/javascripts/jquery-ui.js"></script>
+<script type="text/javascript" src="../../../resources/javascripts/jQDateRangeSlider-min.js"></script>
+
+<!-- Visualize.js -->
+<script type='text/javascript' src="http://localhost:8081/jasperserver-pro/client/visualize.js?_opt=true"></script>
+<script type="text/javascript" src="javascripts/locations-main.js"></script>
+
+</body>
+</html>
