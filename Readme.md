@@ -1,7 +1,10 @@
 Visualize.js sample app "UrbanRoast" tutorial
 =============================================
 
-Getting Started
+* You can view the [live hosted demo here.]
+
+
+Getting started
 ---------------
  
  > Follow these steps to load the application files
@@ -38,6 +41,7 @@ Getting Started
 [live demo here]: http://54.244.191.72/urban-roast/cafe.html
 [tutorial series here on GitHub.]: http://54.244.191.72/urban-roast/cafe.html
 [MAMP]: https://www.mamp.info/en/
+[live hosted demo here.]: http://54.244.191.72/urban-roast/cafe.html
 
 [Download JRS]: https://jaspersoft.com/download
 
