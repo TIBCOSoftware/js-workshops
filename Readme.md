@@ -22,7 +22,9 @@ Getting started
  
  - Now import the jrs-urban-export.zip file from the resources/jrs-resources folder on this repo into the JasperReport Server by logging in as superuser and going to (admin > server settings > import).
  
- - Now you can open a module, for example module3, and run the cafe.html in your web browser. From there you can use the top right nav to view all modules and their attached pages.
+ - You can now run any of the main module pages, for example module3, and cafe.html on your server. From there you can use the top right nav to run the three finished modules and their attached pages.
+ 
+ - Keep in mind that module1 is broken up into three parts as we build, with the module 1-3 and locations.html as the finished result.
  
  - Note: You'll want to make sure that all HTML files point to the location you have JRS installed for Visualize.js. 
 	This is usually on localhost:8080 - "http://localhost:8080/jasperserver-pro/client/visualize.js"
