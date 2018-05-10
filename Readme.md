@@ -13,12 +13,14 @@ Getting started
  
  - Download this github repo onto your local web server. Use any tool that you like (for example: [MAMP]) to host.
  
- - Build a new database in POSTGRES called "freshcoffee" with the tables... (coffee, dairy, drink, ingredient, sales)
+ - Build a new database in POSTGRES called "freshcoffee" (using pgAdmin you can right click Databases > create > database)
   
- - You can then load the CSV data from the resources/data folder using the following in your termimal for each file.
+ - Now right click your "freshcoffee" database and select restore. Under Filename you can select your database file named "freshcoffee" under the resources/data folder in this repo. 
+  
+ - Your database should now be set! If you need them, you can also find the CSV data files under the resources/data folder and scripts to build the tables and add with the following in the terminal.
  - psql -c "COPY tbname FROM '/tmp/the_file.csv' delimiter '|' csv;"
  
- - Import the urban-roast-export.zip file from the resources/jrs-resources folder on this repo into the JasperReport Server by logging in as superuser and going to (admin > server settings > import).
+ - Now import the jrs-urban-export.zip file from the resources/jrs-resources folder on this repo into the JasperReport Server by logging in as superuser and going to (admin > server settings > import).
  
  - Run the HTML files from the attached modules.
  
