@@ -22,7 +22,7 @@ Getting started
  
  - Now import the jrs-urban-export.zip file from the resources/jrs-resources folder on this repo into the JasperReport Server by logging in as superuser and going to (admin > server settings > import).
  
- - You can now run any of the main module pages, for example module3, and cafe.html on your server. From there you can use the top right nav to run the three finished modules and their attached pages.
+ - You can now run any of the main module pages, for example module3 and cafe.html on your server. From there you can use the top right nav in the page to run any of the three finished modules.
  
  - Keep in mind that module1 is broken up into three parts as we build, with the module 1-3 and locations.html as the finished result.
  
