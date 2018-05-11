@@ -3,11 +3,13 @@ Visualize.js sample app "UrbanRoast" tutorial
 
 * You can view the [live hosted demo here.]
 
+* Follow along with our v7 embedding [video tutorial series here.]
+
 
 Getting started
 ---------------
  
- > Follow these steps to load the application files
+ > Follow these steps to load the application demo locally on your system
  
  - Install Jaspersoft locally onto your system.
  
@@ -21,6 +23,8 @@ Getting started
  - psql -c "COPY tbname FROM '/tmp/the_file.csv' delimiter '|' csv;"
  
  - Now import the jrs-urban-export.zip file from the resources/jrs-resources folder on this repo into the JasperReport Server by logging in as superuser and going to (admin > server settings > import).
+ 
+  - You can also double check your database connection by going to the Jaspersoft Server, opening view > repository and navigating to public > samples > UrbanRoast > Data Sources. Now you can right click the "freshcoffee" data source and select edit to ensure that your Postgres username and password (default: postgres/postgres) is set. If your Postgres data port is different than the default you can change it here as well.
  
  - You can now run any of the main module pages, for example module3 and cafe.html on your server. From there you can use the top right nav in the page to run any of the three finished modules.
  
@@ -40,8 +44,7 @@ Getting started
 [installation]: https://jaspersoft.com/download
 [quick start guide]: https://jaspersoft.com/jaspersoft-quick-start-guide
 [API video tutorials]: https://community.jaspersoft.com/wiki/visualizejs-tutorials
-[video tutorial series]: https://www.youtube.com/watch?v=hELgK1RG01M&list=PL5NudtWaQ9l4wsnGx0GFyOsvztFBJp1_S
-[Visualize.js tutorial series]: https://www.youtube.com/watch?v=hELgK1RG01M&list=PL5NudtWaQ9l4wsnGx0GFyOsvztFBJp1_S
+[video tutorial series here.]: https://www.youtube.com/watch?v=hELgK1RG01M&list=PL5NudtWaQ9l4wsnGx0GFyOsvztFBJp1_S
 [live demo here]: http://54.244.191.72/urban-roast/cafe.html
 [tutorial series here on GitHub.]: http://54.244.191.72/urban-roast/cafe.html
 [MAMP]: https://www.mamp.info/en/
