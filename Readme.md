@@ -9,9 +9,9 @@ Visualize.js sample app "UrbanRoast" tutorial
 Getting started
 ---------------
  
- > Follow these steps to load the application demo locally on your system
+ > Follow these steps to load this demo locally onto your system
  
- - Install Jaspersoft locally onto your system.
+ - First install Jaspersoft v7. If needed, you can install the [60 day trial here.]
  
  - Download this github repo onto your local web server. Use any tool that you like (for example: [MAMP]) to host.
  
@@ -24,7 +24,7 @@ Getting started
  
  - Now import the jrs-urban-export.zip file from the resources/jrs-resources folder on this repo into the JasperReport Server by logging in as superuser and going to (admin > server settings > import).
  
-  - You can also double check your database connection by going to the Jaspersoft Server, opening view > repository and navigating to public > samples > UrbanRoast > Data Sources. Now you can right click the "freshcoffee" data source and select edit to ensure that your Postgres username and password (default: postgres/postgres) is set. If your Postgres data port is different than the default you can change it here as well.
+ - You can also double check your database connection by going to the Jaspersoft Server, opening view > repository and navigating to public > samples > UrbanRoast > Data Sources. Now you can right click the "freshcoffee" data source and select edit to ensure that your Postgres username and password (default: postgres/postgres) is set. If your Postgres data port is different than the default you can change it here as well.
  
  - You can now run any of the main module pages, for example module3 and cafe.html on your server. From there you can use the top right nav in the page to run any of the three finished modules.
  
@@ -49,6 +49,7 @@ Getting started
 [tutorial series here on GitHub.]: http://54.244.191.72/urban-roast/cafe.html
 [MAMP]: https://www.mamp.info/en/
 [live hosted demo here.]: http://54.244.191.72/urban-roast/cafe.html
+[60 day trial here.]: https://www.jaspersoft.com/download
 
 [Download JRS]: https://jaspersoft.com/download
 
