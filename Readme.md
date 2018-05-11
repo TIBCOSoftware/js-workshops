@@ -26,7 +26,7 @@ Getting started
  
  - You can also double check your database connection by going to the Jaspersoft Server, opening view > repository and navigating to public > samples > UrbanRoast > Data Sources. Now you can right click the "freshcoffee" data source and select edit to ensure that your Postgres username and password (default: postgres/postgres) is set. If your Postgres data port is different than the default you can change it here as well.
  
- - You can now run any of the main module pages, for example module3 and cafe.html on your server. From there you can use the top right nav in the page to run any of the three finished modules.
+ - You can now run any of the main module pages, for example you can open the module3 folder and run cafe.html on your server. From there you can use the top right nav in the page to run any of the three finished modules.
  
  - Keep in mind that module1 is broken up into three parts as we build, with the module 1-3 and locations.html as the finished result.
  
