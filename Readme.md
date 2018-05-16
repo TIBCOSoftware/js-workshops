@@ -1,8 +1,6 @@
 Visualize.js sample app "UrbanRoast" tutorial
 =============================================
 
-* You can view the [live hosted demo here.]
-
 * Follow along with our v7 embedding [video tutorial series here.]
 
 
