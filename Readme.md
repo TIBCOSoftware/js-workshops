@@ -35,6 +35,7 @@ Getting started
  ### Video Tutorials
  
  * Need a jump start? Watch our [Visualize.js tutorial series] and see what's new for version 7. Also you can view our general [API video tutorials] for more information on Visualize.js and embedding inside your application.
+ * View the [live hosted demo here.]
  
 
 [Visualize.js API reference guide]: https://community.jaspersoft.com/documentation/tibco-jasperreports-server-visualizejs-guide/v62/api-reference-visualizejs
