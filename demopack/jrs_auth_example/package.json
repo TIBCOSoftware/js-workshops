@@ -1,0 +1,19 @@
+{
+  "name": "jrs-auth-example",
+  "version": "0.1.0",
+  "description": "Example of pre-auth into JRS",
+  "main": "server.js",
+  "scripts": {
+    "start": "npx nodemon server.js"
+  },
+  "author": "Gene Arnold",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "ejs": "2.6.2",
+    "node-json-db": "^0.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}

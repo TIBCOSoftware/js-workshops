@@ -1,0 +1,38 @@
+{
+    "users": [
+        {
+            "org": "organization_1",
+            "username": "nomad",
+            "password": "password",
+            "email": "nomad@email.com",
+            "roles": "JRS_Admin",
+            "pa1" : "attribute1",
+            "pa2" : "attribute2",
+            "token": "dT1ub21hZHxvPW9yZ2FuaXphdGlvbl8xfHI9SlJTX0FkbWlu"
+        },
+        {
+            "org": "organization_1",
+            "username": "trek",
+            "password": "password",
+            "email": "trek@email.com",
+            "roles": "JRS_Admin",
+            "token": ""
+        },
+        {
+            "org": "organization_1",
+            "username": "manager",
+            "password": "manager",
+            "email": "manager@email.com",
+            "roles": "ROLE_SUPERMART_MANAGER",
+            "token": ""
+        },
+        {
+            "org": "mtb",
+            "username": "bike",
+            "password": "bike",
+            "email": "bike@email.com",
+            "roles": "ROLE_SUPERMART_MANAGER",
+            "token": ""
+        }
+    ]
+}
