@@ -1,0 +1,13 @@
+{
+  "name": "jrs_iframe_example",
+  "description": "Node.js app for jrs_iframe_example",
+  "version": "1.0.0",
+  "author": "Author <author@example.com>",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "swaggerize-express": "^4.0.0"
+  },
+  "main": "server.js"
+}

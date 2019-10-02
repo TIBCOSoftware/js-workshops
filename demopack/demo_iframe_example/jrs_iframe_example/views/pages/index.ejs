@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+    html,body{height:100%; width:100%; margin:0;}
+    .h_iframe iframe {width:100%; height:100%;}
+    .h_iframe {
+        height: 100%; width:100%;
+    }
+    #loadImg {
+    position:absolute;z-index:999;
+    }
+    #loadImg div {
+        display: table-cell;
+        width: 100%;
+        height: 100%;
+        background: #E7E7E7;
+        text-align: center;
+        vertical-align: middle;
+    }
+</style>
+<head>
+    <title>JRS iFrame Example</title>
+    <script src="<%= uriPath %>/js/jquery.min.js"></script>
+    <script type="text/javascript" src="<%= uriPath %>/js/w2ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<%= uriPath %>/css/w2ui.min.css" />
+    <link rel="icon" href="<%= uriPath %>/images/favicon.ico">
+</head>
+<body>
+
+<div id="layout" style="width: 100%; height: 800px;"></div>
+<div style="height: 10px;"></div>
+
+<button class="w2ui-btn" onclick="w2ui['layout'].toggle('top', window.instant)">Title Bar</button>
+<button class="w2ui-btn" onclick="w2ui['layout'].toggle('left', window.instant)">Report Buttons</button>
+
+
+
+<script type="text/javascript">
+var reportBtn0 = null;
+var reportBtn1 = null;
+var reportBtn2 = null;
+var reportBtn3 = null;
+var dashboardBtn = null;
+
+$(function () { 
+
+    var pstyle = 'border: 1px solid #dfdfdf; padding: 5px;';
+    $('#layout').w2layout({
+        name: 'layout',
+        panels: [
+            { type: 'top', size: 130, resizable: false, style: pstyle, content: '<img src="<%= uriPath %>/images/jrs_logo.png">' },
+            { type: 'left', size: 225, resizable: false, style: pstyle, content: '<div id="inputContainer"></div>' },
+            { type: 'main', style: pstyle, content: '<div class="h_iframe" id="reportContainer"><iframe id="jrsreport" frameborder="0" allowfullscreen></iframe></div>' }
+        ]
+    });
+
+    createOutputDropDown();
+
+    reportBtn0 = new createReportButton(
+        id = "reportBtn0",
+        text = "Log In / Report List",
+        //src = "http://localhost:8080/jasperserver-pro/flow.html?_flowId=searchFlow&mode=search&j_username=jasperadmin%7Corganization_1&j_password=jasperadmin&sessionDecorator=no"
+        src = "<%= jrs %>/flow.html?_flowId=searchFlow&mode=search&j_username=jasperadmin%7Corganization_1&j_password=jasperadmin&sessionDecorator=no"
+
+        
+    );
+
+    var hr = document.createElement("hr");
+    hr.width = "135px";
+    //document.getElementById("reportBtn0").parentElement.appendChild(hr);
+
+    reportBtn1 = new createReportButton(
+        id = "reportBtn1",
+        text = "Run Report One",
+        src = "<%= jrs %>/flow.html?_flowId=viewReportFlow&reportUnit=/public/Samples/Reports/01._Geographic_Results_by_Segment_Report&sessionDecorator=no"
+    );
+
+    reportBtn2 = new createReportButton(
+        id = "reportBtn2",
+        text = "Run Report Two",
+        src = "<%= jrs %>/flow.html?_flowId=viewReportFlow&reportUnit=/public/Samples/Reports/SalesByMonthReport&sessionDecorator=no"
+    );
+
+    reportBtn2 = new createReportButton(
+        id = "reportBtn3",
+        text = "Run Report Three",
+        src = "<%= jrs %>/flow.html?_flowId=viewReportFlow&reportUnit=/public/Samples/Reports/5g.AccountsReport&sessionDecorator=no",
+    );
+
+    dashboardBtn = new createReportButton(
+        id = "dashboardBtn",
+        text = "Run Dashboard",
+        src = "<%= jrs %>/viewer.html#/public/Samples/Dashboards/1._Supermart_Dashboard&sessionDecorator=no"
+    ); 
+
+});
+
+    function createReportButton(id,text,src,callbackFunction){
+
+
+        var reportBtn = document.createElement("button");
+
+        this.reportBtn = reportBtn;
+        this.callbackFunction = callbackFunction;
+        var curBtn = this;
+
+        this.changeText = function(newText){
+            curBtn.reportBtn.innerText = newText;
+        };
+
+        reportBtn.setAttribute('id',id );
+        reportBtn.setAttribute('class','w2ui-btn' );
+        reportBtn.setAttribute('style','margin-top: 5px;margin-bottom: 5px;');
+        reportBtn.style.width = "135px";
+        reportBtn.textContent = text;
+        reportBtn.onclick = function(){setReportFrame(src)};
+        document.getElementById("inputContainer").appendChild(document.createElement("div")); 
+        document.getElementById("inputContainer").appendChild(reportBtn); 
+
+        if(callbackFunction){
+            callbackFunction(curBtn);
+        }
+    }
+
+    function setReportFrame(src){
+        var opt = getSelectedOption("mySelect");
+        var frame = document.getElementById("jrsreport");
+
+        if (opt.value == "html"){
+            frame.src = src;
+        }else{
+            frame.src = src + "&output=pdf";
+        }
+        
+        
+    }
+
+    function getSelectedOption(sel) {
+        var selectList = document.getElementById(sel)
+        var opt;
+        for ( var i = 0, len = selectList.options.length; i < len; i++ ) {
+            opt = selectList.options[i];
+            if ( opt.selected === true ) {
+                break;
+            }
+        }
+        return opt;
+    }
+
+    function createOutputDropDown(){
+            var inputContainer = document.getElementById("inputContainer");
+            var selectList = document.createElement("select");
+            selectList.id = "mySelect";
+            var array = ["html","pdf"];
+            inputContainer.appendChild(document.createElement("br"));
+
+            var d = document.createElement("span");
+            d.setAttribute("class","w2ui-btn");
+            d.innerHTML = "Output: ";
+            d.style.font = "11px system-ui";
+            d.style.marginLeft = "6px";
+            inputContainer.appendChild(d);
+            inputContainer.appendChild(selectList);
+
+            for (var i = 0; i < array.length; i++) {
+                var option = document.createElement("option");
+                option.value = array[i];
+                option.text = array[i];
+                selectList.appendChild(option);
+            }
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JRS Create Run Report</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"><link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap-toggle.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-toggle.js"></script>
+  <script src="http://localhost:8080/jasperserver-pro/client/visualize.js"></script>
+  <script src="js/script.js"></script>
+  <style>
+    .btn-group.special {
+      display: flex;
+    }
+
+    .special .btn {
+      flex: 1
+    }
+
+    .list-group-item.active {
+        z-index: 2;
+        color: #fff;
+        background-color: #138496;
+        border-color: #138496;
+    }
+  </style>
+  
+</head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div id="reportControls" class="col-3" style="text-align: left; padding: 15px">
+        <div style="padding: 5px;font-weight: bold">Save Reports in /public/Samples/Create_Run_Report</div>
+        <div class="btn-group special" role="group" aria-label="Basic example" style="padding-bottom: 10px;">
+            <button type="button" id="runReportBtn" class="btn btn-info">Run</button>
+            <button type="button" id="editReportBtn" class="btn btn-info">Edit</button>
+            <button type="button" id="createReport" class="btn btn-info">Create</button>
+            <button type="button" id="refreshBtn" class="btn btn-info">Refresh</button>
+        </div>
+
+        <ul id="reportList" class="list-group"></ul>
+        <div id="ic" >  </div>
+      </div>
+
+      <div class="col-9 border" style="text-align: left; padding: 15px">
+        <div>
+          <iframe id="adhocViewer" frameborder="0" scrolling="no" style="width: 1160px; height: 800px;"></iframe>
+        </div>
+
+        <div style="width: 100%; overflow: hidden;">
+            <div id="reportViewer" style="width: 95%; float: left;">  </div>
+            
+        </div>
+
+      </div>
+        
+    </div>
+  </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://getbootstrap.com/docs/4.0/examples/navbar-fixed/ -->
+<html lang="en" class="gr__getbootstrap_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>JRS SSO Example</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/navbar-top-fixed.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content.css"></head>
+
+  <body data-gr-c-s-loaded="true">
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link d-none" href="https://getbootstrap.com/docs/4.0/examples/navbar-fixed/#">Home Dashboard <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-none" href="https://getbootstrap.com/docs/4.0/examples/navbar-fixed/#">My Reports </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-none" href="https://getbootstrap.com/docs/4.0/examples/navbar-fixed/#">Create a Report</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="form-inline my-2 my-lg-0">
+        <a class="nav-link d-none" href="https://getbootstrap.com/docs/4.0/examples/navbar-fixed/#">Link</a>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      <div class="jumbotron">
+        <h1>Select a user or create a new one</h1>
+
+        <form">
+          <div class="form-group">
+            <label for="userDropdown">Select an existing user</label>
+            <select id="userDropdown" class="form-control"></select>
+          </div>
+          <div class="form-group">
+            <label for="userId">User Id</label>
+            <input type="text" class="form-control" id="userId">
+          </div>
+          <div class="form-group">
+            <label for="userOrgId">Organization Id</label>
+            <input type="text" class="form-control" id="userOrgId">
+          </div>
+          <div class="form-group">
+            <label for="userRoles">User Roles</label>
+            <input type="text" class="form-control" id="userRoles">
+          </div>
+          <div class="form-group">
+            <label for="userPA1">Attribute - StoreType</label>
+            <select id="userPA1" class="form-control">
+              <option></option>
+              <option value="Deluxe Supermarket">Deluxe Supermarket</option>
+              <option value="Supermarket">Supermarket</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="userPA2">Attribute StoreCountry</label>
+            <select id="userPA2" class="form-control">
+              <option></option>
+              <option value="USA">USA</option>
+              <option value="Mexico">Mexico</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="jrsToken">JRS Token</label>
+            <input type="text" class="form-control" id="jrsToken">
+          </div>
+
+          <button id="login" class="btn btn-primary">Submit</button>
+        </form>
+
+      </div>
+    </main>
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./js/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/users.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
+
+</body></html>

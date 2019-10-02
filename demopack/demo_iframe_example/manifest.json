@@ -1,0 +1,1 @@
+{"name":"jrs_iframe_example","description":"Node.js app for jrs_iframe_example","version":"1.0.0","type":"nodejs-app","resources":{"physicalMemory":1024,"totalMemory":4096,"cpuQuota":25},"endpoints":[{"primary":true,"protocol":"http","port":"8000","public":true,"type":"public","pingable":false,"spec":{"name":"jrs_iframe_example","version":"1.0.0"}}]}

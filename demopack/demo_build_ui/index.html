@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JRS Visualize.js Build UI</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"><link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap-toggle.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-toggle.js"></script>
+  <script src="http://localhost:8080/jasperserver-pro/client/visualize.js"></script>
+  <script src="js/script.js"></script>
+
+  
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <div id="reportControls" class="col-3 border" style="text-align: center; padding: 15px">
+      
+      <div style="padding: 5px">
+        <button id="btnRunReport" data-width="240" type="button" class="btn btn-info" >Run Report</button>
+      </div>
+
+      </div>
+
+    <div class="col-9 border">
+      <div id="container"></div>
+    </div>
+      
+  </div>
+</div>
+
+</body>
+</html>
