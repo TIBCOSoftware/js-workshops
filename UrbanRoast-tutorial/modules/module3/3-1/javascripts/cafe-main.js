@@ -273,7 +273,9 @@ function loadViews(v) {
 
         for (var col = 0; col < numCol; col++) {
             for (var row = 0; row < numRow; row++) {
-                eachRow = data._dataset_internal_.levelDataNodes[0].detail.data[row][col];
+                //changing definition of eachRow as data couldn't be found in Chrome.
+                //eachRow = data._dataset_internal_.levelDataNodes[0].detail.data[row][col];
+                eachRow = data._dataset_internal_.levelDataNodes[0].all.children[0].detail.data[row][col];
                 if (col === 0) { nameData.push(eachRow) }
                 if (col === 0) { svgNameData.push(eachRow) }
                 if (col === 5) { cafData.push(eachRow) }
