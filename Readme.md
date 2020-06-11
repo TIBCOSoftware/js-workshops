@@ -45,7 +45,7 @@ Getting started
 [API video tutorials]: https://community.jaspersoft.com/wiki/visualizejs-tutorials
 [video tutorial series here.]: https://www.youtube.com/watch?v=hELgK1RG01M&list=PL5NudtWaQ9l4wsnGx0GFyOsvztFBJp1_S
 [live demo here]: https://demo.jaspersoft.com/urban-roast/cafe.html
-[tutorial series here on GitHub.]: http://54.244.191.72/urban-roast/cafe.html
+[tutorial series here on GitHub.]: https://demo.jaspersoft.com/urban-roast/cafe.html
 [MAMP]: https://www.mamp.info/en/
 [live hosted demo here.]: https://demo.jaspersoft.com/urban-roast/cafe.html
 [60 day trial here.]: https://www.jaspersoft.com/download
