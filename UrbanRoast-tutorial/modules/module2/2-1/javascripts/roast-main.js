@@ -4,12 +4,12 @@ var avgToProfile = [];
 var avgRoasted = [];
 var avgShipped = [];
 
-visualize({
-    auth: {
-        name: "superuser",
-        password: "superuser"
-    }
-}, function(v) {
+var auth = {
+    name: "superuser",
+    password: "superuser"
+}
+initializeVisualize(initPage, auth);
+function initPage(jrsConfig, v) {
     
     var progressGauges = v.adhocView({
         resource: "/public/Samples/FreshCoffee/Ad_Hoc_Views/Roastery/Coffee_Percentages",
@@ -317,7 +317,7 @@ visualize({
             console.log(e);
         });
     }
-});
+}
 
 function renderGaugeData(data) {
     //console.log(data);
