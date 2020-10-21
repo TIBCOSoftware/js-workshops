@@ -5,14 +5,15 @@ $(function(){
     
 })
 
-visualize({
-    auth: {
-        name: "jasperadmin",
-        password: "jasperadmin",
-        organization: "organization_1"
-    }
-},  function (v) {
+var configPath = '../../config/config.json';
+var  auth = {
+    name: "jasperadmin",
+    password: "jasperadmin",
+    organization: "organization_1"
+}
+initializeVisualize(initPage, auth, configPath);
 
+function initPage(jrsConfig, v) {
     $("#reportViewer").hide();
 
     $("#adhocViewer").hide();
@@ -122,7 +123,7 @@ visualize({
     function handleError(err){
         alert(err.message);
     }
-});
+}
 
 function runReport(v, report){
     v("#reportViewer").report({
