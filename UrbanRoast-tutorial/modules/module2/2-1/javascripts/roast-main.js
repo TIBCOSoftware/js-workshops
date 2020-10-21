@@ -323,7 +323,7 @@ function renderGaugeData(data) {
     //console.log(data);
     //get the col and row count from the ad hoc view data object
     //minus 1 to account for only using 4 of the 5 columns
-    var numCol = (data.levels[0].detail.fields.length) - 1;
+    var numCol = (data.levels[1].detail.fields.length) - 1;
     var numRow = data.counts;
     var onGoal = [];
     var toProfile = [];
@@ -333,7 +333,7 @@ function renderGaugeData(data) {
     //loop through the desired columns (last 4) and push data to prepared arrays
     for (var col = 0; col < numCol; col++) {
         for (var i = 0; i < numRow; i++) {
-            eachRow = data.levelDataNodes[0].detail.data[i][col+1];
+            eachRow = data.levelDataNodes[0].all.children[0].detail.data[i][col+1];
             if (col === 0) { onGoal.push(Number(eachRow)) }
             if (col === 1) { toProfile.push(Number(eachRow)) }
             if (col === 2) { roasted.push(Number(eachRow)) }
