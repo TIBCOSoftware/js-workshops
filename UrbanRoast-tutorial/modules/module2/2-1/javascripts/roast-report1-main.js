@@ -5,12 +5,12 @@ $(document).ready(function(){
     var selectedCoffee = JSON.parse(sessionStorage.getItem("sent"));
     //console.log(selectedCoffee);
 
-    visualize({
-        auth: {
-            name: "superuser",
-            password: "superuser"
-        }
-    }, function (v) {
+    var auth = {
+        name: "superuser",
+        password: "superuser"
+    }
+    initializeVisualize(initPage, auth);
+    function initPage(jrsConfig, v) {
         //add custom export format
         //(should throw a proper error)
         var reportExports = v.report
@@ -138,5 +138,5 @@ $(document).ready(function(){
                 .run()
                 .fail(function(err) { alert(err); });
         });
-    });
+    }
 });
