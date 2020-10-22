@@ -20,10 +20,14 @@ $(function() {
 	$("#loggedInUser").html(getCookie("jrsUser") + " - Log Out");
 
 	var configPath = '../../config/config.json';
-	var  auth = {
-		token: encodeURI(GetParameterValues("token")),
-		preAuth: true,
-		tokenName: "pp"
+	var auth ;
+	var tokenvalue = GetParameterValues("token");
+	if(tokenvalue) {
+		auth = {
+			token: tokenvalue,
+			preAuth: true,
+			tokenName: "pp"
+		}
 	}
 	initializeVisualize(initPage, auth, configPath);
 	function initPage (jrsConfig, v) {
