@@ -4,7 +4,6 @@ var initializeVisualize = function(initialize, authentication, configPath) {
     var path = configPath ? configPath : '../../../../config/config.json';
     jQuery.getJSON(path)
         .done(function(jrsConfig) {
-            //console.log(data);
             options = {
                 dataType: "script",
                 cache: jrsConfig.cacheVisualizeJS || false,
