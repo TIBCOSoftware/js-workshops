@@ -21,10 +21,10 @@ $(function() {
 
 	var configPath = '../../config/config.json';
 	var auth ;
-	var tokenvalue = GetParameterValues("token");
-	if(tokenvalue) {
+	var tokenValue = GetParameterValues("token");
+	if(tokenValue) {
 		auth = {
-			token: tokenvalue,
+			token: tokenValue,
 			preAuth: true,
 			tokenName: "pp"
 		}
