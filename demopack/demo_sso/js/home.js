@@ -24,7 +24,7 @@ $(function() {
 	var tokenValue = GetParameterValues("token");
 	if(tokenValue) {
 		auth = {
-			token: tokenValue,
+			token: encodeURI(tokenValue),
 			preAuth: true,
 			tokenName: "pp"
 		}
