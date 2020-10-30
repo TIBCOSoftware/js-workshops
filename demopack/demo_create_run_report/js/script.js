@@ -98,7 +98,7 @@ function initPage(jrsConfig, v) {
 
         let reportURI = $activeReport.data("reporturi");
 
-        let url = "http://localhost:8080/jasperserver-pro/flow.html?_flowId=adhocFlow&resource=" + reportURI + "&decorate=no";
+        let url = "https://infra-platforms-phase2-11723-rsarda.pfa.jaspersoft.com/jasperserver-pro/flow.html?_flowId=adhocFlow&resource=" + reportURI + "&decorate=no";
 
         $('#adhocViewer').prop('src', url)
 
@@ -112,7 +112,7 @@ function initPage(jrsConfig, v) {
 
         $("#adhocViewer").show();
         
-        let url = "http://localhost:8080/jasperserver-pro/flow.html?_flowId=adhocFlow&decorate=no";
+        let url = "https://infra-platforms-phase2-11723-rsarda.pfa.jaspersoft.com/jasperserver-pro/flow.html?_flowId=adhocFlow&decorate=no";
 
         $('#adhocViewer').prop('src', url)
     });
