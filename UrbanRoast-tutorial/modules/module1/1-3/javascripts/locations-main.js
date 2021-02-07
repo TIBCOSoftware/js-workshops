@@ -7,13 +7,13 @@ maxDate = [];
 
 
 
-visualize({
-    auth: {
-        name: "jasperadmin",
-        password: "jasperadmin",
-        organization: "organization_1"
-    } 
-}, function(v) {
+var auth = {
+    name: "jasperadmin",
+    password: "jasperadmin",
+    organization: "organization_1"
+}
+initializeVisualize(initPage, auth);
+function initPage(jrsConfig , v) {
     var crosstab = v.adhocView({
         resource: "/public/Samples/FreshCoffee/Ad_Hoc_Views/Management/Location_List",
         container: "#manage-view1",
@@ -234,4 +234,4 @@ visualize({
             clickOnMarker(locations[3])
         })
         .addTo(mymap);
-});
+}

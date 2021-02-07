@@ -19,13 +19,18 @@ $(function() {
 	$("#loggedInUser").removeClass( "d-none" );
 	$("#loggedInUser").html(getCookie("jrsUser") + " - Log Out");
 
-	visualize({
-	    auth: {
-	        token: encodeURI(GetParameterValues("token")),
+	var configPath = '../../config/config.json';
+	var auth ;
+	var tokenValue = GetParameterValues("token");
+	if(tokenValue) {
+		auth = {
+			token: encodeURI(tokenValue),
 			preAuth: true,
 			tokenName: "pp"
-	    }
-	}, function (v) {
+		}
+	}
+	initializeVisualize(initPage, auth, configPath);
+	function initPage (jrsConfig, v) {
 
 	    //render report from provided resource
 	    v("#dashboard").report({
@@ -37,7 +42,7 @@ $(function() {
 	    function handleError(err) {
 	        alert(err.message);
 	    }
-	});
+	}
 
 	$("#loggedInUser").click(function(){
 

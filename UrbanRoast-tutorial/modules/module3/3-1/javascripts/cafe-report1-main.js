@@ -4,12 +4,12 @@ $(document).ready(function(){
 //will retrieve session and get the value;
 var order = JSON.parse(sessionStorage.getItem("sent"));
 
-    visualize({
-        auth: {
-            name: "superuser",
-            password: "superuser"
-        }
-    }, function (v) {
+   var auth = {
+        name: "superuser",
+        password: "superuser"
+    }
+    initializeVisualize(initPage, auth);
+    function initPage(jrsConfig, v) {
         //add custom export format
         var reportExports = v.report
             .exportFormats
@@ -143,5 +143,5 @@ var order = JSON.parse(sessionStorage.getItem("sent"));
                 alert(err);
             });
         });
-    });
+    }
 });

@@ -10,6 +10,8 @@ var pageConfig = {
     }
 };
 
+initializeVisualize(initPage);
+
 // create and initialize first selected drink object
 var drink = {
     name: 'Americano',
@@ -33,15 +35,7 @@ var order = [];
 var customName = "Custom " + drink.name;
 
 // initialize Visualize.js
-function initPage() {
-    visualize({
-        auth: {
-            name: "jasperadmin",
-            password: "jasperadmin",
-            organization: "organization_1"
-        }
-    }, function(v) {
-
+function initPage(jrsConfig, v) {
         // load the ad hoc views and report
         loadViews(v);
         
@@ -60,10 +54,7 @@ function initPage() {
                     console.log(err);
                 });
         }); 
-    });
 }
-
-initPage();
 
 function loadViews(v) {
     

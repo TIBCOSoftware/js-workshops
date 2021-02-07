@@ -5,14 +5,15 @@ $(function(){
     
 })
 
-visualize({
-    auth: {
-        name: "jasperadmin",
-        password: "jasperadmin",
-        organization: "organization_1"
-    }
-},  function (v) {
+var configPath = '../../config/config.json';
+var  auth = {
+    name: "jasperadmin",
+    password: "jasperadmin",
+    organization: "organization_1"
+}
+initializeVisualize(initPage, auth, configPath);
 
+function initPage(jrsConfig, v) {
     $("#reportViewer").hide();
 
     $("#adhocViewer").hide();
@@ -97,7 +98,7 @@ visualize({
 
         let reportURI = $activeReport.data("reporturi");
 
-        let url = "http://localhost:8080/jasperserver-pro/flow.html?_flowId=adhocFlow&resource=" + reportURI + "&decorate=no";
+        let url = "https://mobiledemo.jaspersoft.com/jasperserver-pro/flow.html?_flowId=adhocFlow&resource=" + reportURI + "&decorate=no";
 
         $('#adhocViewer').prop('src', url)
 
@@ -111,7 +112,7 @@ visualize({
 
         $("#adhocViewer").show();
         
-        let url = "http://localhost:8080/jasperserver-pro/flow.html?_flowId=adhocFlow&decorate=no";
+        let url = "https://mobiledemo.jaspersoft.com/jasperserver-pro/flow.html?_flowId=adhocFlow&decorate=no";
 
         $('#adhocViewer').prop('src', url)
     });
@@ -122,7 +123,7 @@ visualize({
     function handleError(err){
         alert(err.message);
     }
-});
+}
 
 function runReport(v, report){
     v("#reportViewer").report({

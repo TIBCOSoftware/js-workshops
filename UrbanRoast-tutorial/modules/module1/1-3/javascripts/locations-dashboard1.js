@@ -9,13 +9,12 @@ $(document).ready(function(){
 
     //formattedDate = formatDate(selectedDate);
     //console.log("The formatted date is " + formattedDate);
-
-    visualize({
-        auth: {
-            name: "superuser",
-            password: "superuser"
-        }
-    }, function(v) {
+    var auth = {
+        name: "superuser",
+        password: "superuser"
+    }
+   initializeVisualize(initPage, auth);
+    function initPage(jrsConfig, v) {
 
         var first = v.adhocView({
             resource: "/public/Samples/FreshCoffee/Ad_Hoc_Views/Management/DailyDrilldown___Sales_and_Profit",
@@ -136,5 +135,5 @@ $(document).ready(function(){
                 console.log(e);
             }
         });
-    });
+    }
 });
