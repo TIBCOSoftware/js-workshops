@@ -5,7 +5,7 @@
   "author": "Author <author@example.com>",
   "dependencies": {
     "dotenv": "^4.0.0",
-    "ejs": "^2.7.1",
+    "ejs": "^3.1.7",
     "express": "^4.17.1",
     "swaggerize-express": "^4.0.0"
   },
