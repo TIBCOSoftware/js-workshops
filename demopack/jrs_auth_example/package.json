@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.3",
-    "ejs": "2.6.2",
+    "ejs": "3.1.7",
     "node-json-db": "^0.7.3"
   },
   "devDependencies": {
